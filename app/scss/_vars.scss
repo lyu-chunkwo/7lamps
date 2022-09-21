@@ -1,6 +1,6 @@
-$accent: #ed1c24;
+$accent: #ff9a00;
 $bg: #1c1c1c;
-$text: #4b4b4b;
+$text: #5e5e5e;
 
 // ! Миксин для fancybox(video-popup), предотвращает ошибку gulp
 @function max($numbers...) {
@@ -43,9 +43,39 @@ $text: #4b4b4b;
 // @extend %radio-hidden;
 
 // ! Шаблон для Шрифта
-%font-name-400 {
-  font-family: "font-name", sans-serif;
+%robotocondensed-400 {
+  font-family: "RobotoCondensed-Regular", sans-serif;
   font-weight: 400;
+}
+
+%robotocondensed-500 {
+  font-family: "RobotoCondensed-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%robotocondensed-700 {
+  font-family: "RobotoCondensed-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%oswald-400 {
+  font-family: "Oswald-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%oswald-500 {
+  font-family: "Oswald-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%oswald-700 {
+  font-family: "Oswald-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%oswald-800 {
+  font-family: "Oswald-Heavy", sans-serif;
+  font-weight: 800;
 }
 // ! Использование шаблона
 // @extend %font-name-400;

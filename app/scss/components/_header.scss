@@ -1,0 +1,76 @@
+.header {
+  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0 rgba(0, 0, 0, 0.12),
+    0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  padding: 5px 0;
+  position: fixed;
+  width: 100%;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #777;
+      transition: color 0.5s;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  &__item,
+  &__cart {
+    padding: 0 15px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -26px;
+      background-color: $accent;
+      transition: width 0.7s;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  &__cart-svg {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: $text;
+    transition: fill 0.5s;
+  }
+
+  &__cart-link {
+    position: relative;
+    padding-left: 26px;
+
+    &:hover {
+      .header__cart-svg {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.logo {
+  &__img {
+    width: 112px;
+  }
+}
