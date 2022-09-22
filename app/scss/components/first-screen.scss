@@ -1,0 +1,66 @@
+.first-screen {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 100vh;
+  margin-bottom: 70px;
+
+  &__text-box {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    @extend %oswald-400;
+    padding-top: 60px;
+  }
+
+  &__above-title {
+    font-size: 45px;
+    color: #5e5e5e;
+  }
+
+  &__title {
+    font-size: 55px;
+    color: #383838;
+    @extend %oswald-800;
+  }
+
+  &__under-title {
+    font-size: 35px;
+    color: #3b3b3b;
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    display: block;
+    padding: 15px;
+    border: 2px solid $accent;
+    background-color: #fff;
+    border-radius: 5px;
+    color: $accent;
+    text-transform: uppercase;
+    @extend %oswald-500;
+    font-size: 14px;
+    transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+
+    &:hover {
+      color: #fff;
+      background-color: $accent;
+      border-color: #fff;
+
+      .first-screen__svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__svg {
+    fill: $accent;
+    transition: fill 0.5s;
+  }
+}

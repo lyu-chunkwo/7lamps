@@ -4,8 +4,11 @@
   padding: 5px 0;
   position: fixed;
   width: 100%;
+  z-index: 1030;
+  background-color: #fff;
 
   &__nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +23,10 @@
         color: $accent;
       }
     }
+  }
+
+  &__box {
+    display: flex;
   }
 
   &__list {
