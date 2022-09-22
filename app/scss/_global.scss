@@ -36,6 +36,13 @@ body {
   padding: 0 15px;
 }
 
+.title {
+  font-size: 30px;
+  color: #5e5e5e;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 input,
 textarea {
   &:active,
@@ -79,4 +86,32 @@ textarea {
   &:active {
     border: 1px solid yellowgreen;
   }
+}
+
+.link-button {
+  display: block;
+  padding: 15px;
+  border: 2px solid $accent;
+  background-color: #fff;
+  border-radius: 5px;
+  color: $accent;
+  text-transform: uppercase;
+  @extend %oswald-500;
+  font-size: 14px;
+  transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+
+  &:hover {
+    color: #fff;
+    background-color: $accent;
+    border-color: #fff;
+
+    .link-button__svg {
+      fill: #fff;
+    }
+  }
+}
+
+.link-button__svg {
+  fill: $accent;
+  transition: fill 0.5s;
 }

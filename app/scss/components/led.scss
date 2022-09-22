@@ -1,0 +1,52 @@
+.led {
+  &__wrap {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  &__main-title {
+    margin-bottom: 40px;
+  }
+
+  &__text-box {
+    max-width: 788px;
+    margin-left: auto;
+    padding: 50px;
+  }
+
+  &__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+  }
+
+  &__link {
+    max-width: 282px;
+    margin: 0 auto;
+  }
+}
+.container {
+}
+.title {
+}
+.link-button {
+  &__svg {
+  }
+}
+.wow {
+}
+.animate {
+  &__bounceInUp {
+  }
+}
