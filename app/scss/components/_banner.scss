@@ -15,7 +15,7 @@
 
   &__title {
     font-size: 20px;
-    color: #5e5e5e;
+    color: $text;
     font-weight: 500;
     padding-bottom: 5px;
     border-bottom: 2px solid #e3e3e3;
@@ -48,7 +48,7 @@
     border: 1px solid #bbbbbb;
     margin-bottom: 10px;
     padding: 10px;
-    color: #5e5e5e;
+    color: $text;
   }
 
   &__search-btn {
@@ -250,5 +250,7 @@
 
   &__img {
     max-width: 788px;
+    min-height: 497px;
+    object-fit: cover;
   }
 }
