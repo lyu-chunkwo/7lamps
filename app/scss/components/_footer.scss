@@ -1,0 +1,165 @@
+.footer {
+  background-color: #1e1e1e;
+  padding-top: 40px;
+
+  &__wrapper {
+    border-bottom: 1px solid #fff;
+  }
+
+  &__items {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    max-width: 270px;
+    width: 100%;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #fff;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 2px;
+      background: $accent;
+      left: 0;
+      bottom: -2px;
+      transition: width 0.5s;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    margin-bottom: 5px;
+  }
+
+  &__menu-link {
+    color: #fff;
+    line-height: 1.8;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__cart-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    transition: 0.5s;
+
+    span {
+      margin-right: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      color: $accent;
+
+      .footer__cart-svg {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__cart-svg {
+    margin-right: 10px;
+    fill: #fff;
+    transition: fill 0.5s;
+  }
+
+  &__address {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  &__contacts {
+    a {
+      color: #fff;
+    }
+  }
+
+  &__phone {
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  &__phone,
+  &__email {
+    transition: color 0.5s;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__bottom {
+    padding: 20px 0;
+  }
+
+  &__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      color: $accent;
+      opacity: 0.7;
+    }
+  }
+}
+
+.go-up {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #888;
+  border-radius: 50%;
+  transition: border-color 0.5s;
+
+  &.active {
+    display: block;
+  }
+
+  &:hover {
+    border-color: $accent;
+
+    .go-up__svg {
+      fill: $accent;
+    }
+  }
+
+  &__svg {
+    fill: #888;
+    transition: fill 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

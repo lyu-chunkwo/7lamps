@@ -91,5 +91,12 @@
     .header__item {
       padding: 0 10px;
     }
+
+    .header__cart,
+    .header__item {
+      &::before {
+        bottom: -15px;
+      }
+    }
   }
 }
