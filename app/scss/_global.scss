@@ -22,6 +22,10 @@ body {
 
 .main {
   flex-grow: 1;
+
+  &--page {
+    padding-top: 100px;
+  }
 }
 
 .container {
@@ -48,6 +52,21 @@ body {
   color: #5e5e5e;
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 40px;
+
+  &--page {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e2e2;
+
+    @media (max-width: 920px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 549px) {
+    margin-bottom: 25px;
+    font-size: 25px;
+  }
 }
 
 input,
@@ -121,9 +140,33 @@ textarea {
     width: 202px;
     margin: 0 auto;
   }
+
+  @media (max-width: 549px) {
+    font-size: 12px;
+  }
 }
 
 .link-button__svg {
   fill: $accent;
   transition: fill 0.5s;
+}
+
+.page-content__box {
+  max-width: 750px;
+  margin-right: 40px;
+
+  @media (max-width: 920px) {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.page-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  @media (max-width: 920px) {
+    display: block;
+  }
 }

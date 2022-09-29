@@ -1,6 +1,10 @@
 .led {
   margin-bottom: 70px;
 
+  @media (max-width: 920px) {
+    margin-bottom: 30px;
+  }
+
   &__wrap {
     background-repeat: no-repeat;
     background-position: center center;
@@ -8,26 +12,35 @@
     background-attachment: fixed;
   }
 
-  &__main-title {
-    margin-bottom: 40px;
-  }
-
   &__text-box {
     max-width: 788px;
     margin-left: auto;
     padding: 50px;
+
+    @media (max-width: 549px) {
+      padding: 35px 15px 0;
+    }
   }
 
   &__title {
     font-size: 30px;
     margin-bottom: 10px;
     font-weight: 500;
+
+    @media (max-width: 549px) {
+      font-size: 20px;
+    }
   }
 
   &__text {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 25px;
+
+    @media (max-width: 549px) {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
   }
 
   &__list {

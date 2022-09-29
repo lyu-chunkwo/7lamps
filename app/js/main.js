@@ -15,7 +15,6 @@ $(function () {
 
   $(".aside__accordion-inner, .aside__third-level").css("display", "none");
 
-
   $(".aside__first-level").on('click', function () {
     $(".aside__first-level").not(this).removeClass("open");
     $(".aside__first-level").not(this).next().slideUp(300);
@@ -50,6 +49,12 @@ $(function () {
     else {
       $('.go-up').removeClass("active");
     }
+  });
+
+
+  $('.header__menu-btn').on('click', function () {
+    $('.header__list, .header__menu-btn').toggleClass('active');
+    $('body').toggleClass('lock'); // ! No scroll
   });
 
 });

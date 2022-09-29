@@ -1,8 +1,8 @@
 .categories {
   margin-bottom: 70px;
 
-  &__title {
-    margin-bottom: 40px;
+  @media (max-width: 920px) {
+    margin-bottom: 30px;
   }
 
   &__list {
@@ -23,12 +23,34 @@
         opacity: 1;
       }
     }
+
+    @media (max-width: 1164px) {
+      margin-bottom: 28px;
+
+      .categories__overlay {
+        transform: perspective(400px) rotateX(0deg);
+        opacity: 1;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 775px) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__img {
     max-width: 360px;
-    min-height: 360px;
+    max-height: 360px;
     object-fit: cover;
+
+    @media (max-width: 775px) {
+      max-width: 100%;
+    }
   }
 
   &__overlay {
@@ -45,6 +67,10 @@
     transform: perspective(400px) rotateX(-90deg);
     transform-origin: top;
     transition: all 0.5s;
+
+    @media (max-width: 1164px) {
+      background-color: rgba(0, 0, 0, 0.51);
+    }
   }
 
   &__overlay-title {

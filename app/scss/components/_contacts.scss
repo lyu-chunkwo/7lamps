@@ -1,0 +1,30 @@
+.contacts {
+  &__box {
+    @media (max-width: 920px) {
+      margin-right: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__img {
+    @media (max-width: 1156px) {
+      display: none;
+    }
+  }
+
+  &__text {
+    a {
+      display: block;
+      color: $text;
+    }
+  }
+
+  &__address {
+    margin-bottom: 25px;
+  }
+}

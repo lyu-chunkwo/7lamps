@@ -1,20 +1,26 @@
 .products-tile {
   margin-bottom: 70px;
 
+  @media (max-width: 920px) {
+    margin-bottom: 30px;
+  }
+
   &--discount {
     margin-bottom: 35px;
   }
 
-  &__title {
-    margin-bottom: 40px;
-  }
-
   &__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -10px;
 
     &--discount {
       margin-bottom: 40px;
+
+      @media (max-width: 920px) {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -24,9 +30,21 @@
     transition: box-shadow 0.5s ease 0s;
     border-radius: 5px;
     position: relative;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &:hover {
       box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.38);
+    }
+
+    @media (max-width: 1159px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 469px) {
+      width: 100%;
     }
   }
 
