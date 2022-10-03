@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.png" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-  <title>7lamps | Page</title>
+  <title>7lamps | Аккаунт</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -64,13 +64,184 @@
   </header>
 
   <main class="main main--page">
-    <section class="contacts">
+    <section class="account">
       <div class="container">
-        <h2 class="title title--page">Контакты</h2>
-        <div class="contacts__wrapper page-wrap">
-          <div class="contacts__box page-content__box">
+        <h2 class="title title--page">Мой аккаунт</h2>
+        <div class="account__wrapper page-wrap">
 
+          <div class="account__box page-content__box">
+  <ul class="account__console-menu">
+    <li class="account__item account__first-level">
+      Меню
+    </li>
+    <li class="account__inner-level">
+      <ul>
+        <li class="account__item">
+          <a href="#tab-1" class="account__console-link active">Консоль</a>
+        </li>
+        <li class="account__item">
+          <a href="#tab-2" class="account__console-link">Заказы</a>
+        </li>
+        <li class="account__item">
+          <a href="#tab-3" class="account__console-link">Адреса</a>
+        </li>
+        <li class="account__item">
+          <a href="#tab-4" class="account__console-link">Детали учетной записи</a>
+        </li>
+        <li class="account__item">
+          <a href="#tab-5" class="account__console-link">Скидочные купоны</a>
+        </li>
+        <li class="account__item">
+          <a href="#" class="account__out">Выйти</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="account__content">
+    <div class="account__text active" id="tab-1">
+      <h3 class="account__content-title">
+        Добро пожаловать, Гость!
+      </h3>
+      <div class="account__console-text">
+        <p>
+          Из главной страницы аккаунта вы можете:
+        </p>
+      </div>
+      <ul class="account__console-list">
+        <li class="account__console-item">
+        </li>
+        <li class="account__console-item">
+          Посмотреть ваши недавние заказы
+        </li>
+        <li class="account__console-item">
+          Настроить платежный адрес и адрес доставки
+        </li>
+        <li class="account__console-item">
+          Изменить пароль и основную информацию
+        </li>
+        <li class="account__console-item">
+          А также другие действия
+        </li>
+      </ul>
+    </div>
+
+    <div class="account__text" id="tab-2">
+      <div class="account__content-box account__content-orderbox">
+        <div class="account__order-text">
+          <p>
+            На данный момент заказов нет!
+          </p>
+        </div>
+
+        <a class="link-button link-button--order" href="#">
+          перейти в магазин
+          <svg class="link-button__svg" width="13" height="13">
+            <use xlink:href="images/svg-sprite/sprite.svg#angles-right"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="account__text" id="tab-3">
+      <div class="account__content-box account__content-addressbox">
+        <div class="account__address-text">
+          <p>
+            Следующие адреса будут использованы при оформлении заказов по-умолчанию.
+          </p>
+        </div>
+
+        <div class="account__addresses">
+          <div class="account__addresses-box">
+            <h3 class="account__address-title">Платёжный адрес:</h3>
+            <ul class="account__address-list">
+              <li class="account__address-item">Пользователь</li>
+              <li class="account__address-item">Проспект Манаса 50 офис 35а</li>
+              <li class="account__address-item">Ленинский район</li>
+              <li class="account__address-item">г. Бишкек</li>
+              <li class="account__address-item">Кыргызстан</li>
+              <li class="account__address-item">720044</li>
+            </ul>
+            <a class="account__address-change" href="#">Изменить</a>
           </div>
+
+          <div class="account__addresses-box">
+            <h3 class="account__address-title">Адрес доставки:</h3>
+            <ul class="account__address-list">
+              <li class="account__address-item">Пользователь</li>
+              <li class="account__address-item">Проспект Манаса 50 офис 35а</li>
+              <li class="account__address-item">Ленинский район</li>
+              <li class="account__address-item">г. Бишкек</li>
+              <li class="account__address-item">Кыргызстан</li>
+              <li class="account__address-item">720044</li>
+            </ul>
+            <a class="account__address-change" href="#">Изменить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="account__text" id="tab-4">
+      <div class="account__content-box account__content-detailsbox">
+        <form class="account__form">
+          <div class="account__names-box">
+            <label class="account__name-label" for="name">
+              Имя <span>*</span>
+              <input class="account__input account__input--name" type="text" id="name">
+            </label>
+
+            <label class="account__name-label" for="surname">
+              Фамилия <span>*</span>
+              <input class="account__input" type="text" id="surname">
+            </label>
+          </div>
+
+          <label class="account__login-lable" for="login">Логин <span>*</span></label>
+          <input class="account__input" type="text" id="login">
+
+          <label class="account__email-label" for="email">E-mail <span>*</span></label>
+          <input class="account__input" type="email" id="email">
+
+          <h3 class="account__passchange-text">Смена пароля</h3>
+
+          <label class="account__passchange-label" for="current-password">
+            Действующий пароль (не заполняйте, чтобы оставить прежний)
+          </label>
+          <input class="account__input" type="password" id="current-password">
+
+          <label class="account__passchange-label" for="new-password">
+            Новый пароль (не заполняйте, чтобы оставить прежний)
+          </label>
+          <input class="account__input" type="password" id="new-password">
+
+          <label class="account__passchange-label" for="confirm-password">
+            Действующий пароль (не заполняйте, чтобы оставить прежний)
+          </label>
+          <input class="account__input" type="password" id="confirm-password">
+
+          <button class="account__button link-button" type="sumbit">сохранить изменения</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="account__text" id="tab-5">
+      <div class="account__content-box account__content-couponsbox">
+        <div class="account__coupons-text">
+          <p>
+            На данный момент купонов нет!
+          </p>
+        </div>
+
+        <a class="link-button link-button--coupons" href="#">
+          перейти в магазин
+          <svg class="link-button__svg" width="13" height="13">
+            <use xlink:href="images/svg-sprite/sprite.svg#angles-right"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
 
           <aside class="aside aside--page">
   <div class="aside__search-box">

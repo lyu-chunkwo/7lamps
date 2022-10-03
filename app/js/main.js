@@ -3,17 +3,17 @@ $(function () {
 
   const wow = new WOW(
     {
-      boxClass: 'wow',      // default
-      animateClass: 'animate__animated', // default
-      offset: 0,          // default
-      mobile: true,       // default
-      live: true        // default
+      boxClass: 'wow',
+      animateClass: 'animate__animated',
+      offset: 0,
+      mobile: true,
+      live: true
     }
   );
   wow.init();
 
 
-  $(".aside__accordion-inner, .aside__third-level").css("display", "none");
+  $(".aside__accordion-inner, .aside__third-level, .account__inner-level").css("display", "none");
 
   $(".aside__first-level").on('click', function () {
     $(".aside__first-level").not(this).removeClass("open");
@@ -26,6 +26,13 @@ $(function () {
     $(".aside__second-level").not(this).removeClass("active");
     $(".aside__second-level").not(this).next().slideUp(300);
     $(this).toggleClass("active");
+    $(this).next().slideToggle(300);
+  });
+
+  $(".account__first-level").on('click', function () {
+    $(".account__first-level").not(this).removeClass("open");
+    $(".account__first-level").not(this).next().slideUp(300);
+    $(this).toggleClass("open");
     $(this).next().slideToggle(300);
   });
 
@@ -56,5 +63,26 @@ $(function () {
     $('.header__list, .header__menu-btn').toggleClass('active');
     $('body').toggleClass('lock'); // ! No scroll
   });
+
+
+  $('.account__console-link').on('click', function (e) {
+    e.preventDefault();
+    $('.account__console-link').removeClass('active');
+    $(this).addClass('active');
+
+    $('.account__text').removeClass('active');
+    $($(this).attr('href')).addClass('active');
+  });
+
+
+  // $('.account__console-link').on('click', function () {
+  //   $('.account__console-link').toggleClass('active');
+  // });
+
+
+  // $('.account__console-link').on('click', function () {
+  //   $('.account__console-link').removeClass('active');
+  //   $(this).addClass('active');
+  // });
 
 });

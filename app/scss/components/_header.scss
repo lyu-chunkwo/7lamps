@@ -137,6 +137,12 @@
     }
   }
 
+  &__link {
+    @media (max-width: 920px) {
+      display: block;
+    }
+  }
+
   &__cart {
     @media (max-width: 920px) {
       padding-top: 10px;
