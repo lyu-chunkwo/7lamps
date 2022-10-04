@@ -1,0 +1,32 @@
+.policy {
+  span {
+    color: #635e5e;
+    font-weight: 700;
+  }
+
+  &__content {
+    & > p {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__list {
+    padding-left: 20px;
+  }
+
+  &__item {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+  }
+}
