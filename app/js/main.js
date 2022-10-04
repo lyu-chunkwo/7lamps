@@ -13,7 +13,7 @@ $(function () {
   wow.init();
 
 
-  $(".aside__accordion-inner, .aside__third-level, .account__inner-level").css("display", "none");
+  $(".aside__accordion-inner, .aside__third-level, .account__inner-level, .checkout__coupons-body").css("display", "none");
 
   $(".aside__first-level").on('click', function () {
     $(".aside__first-level").not(this).removeClass("open");
@@ -33,6 +33,13 @@ $(function () {
     $(".account__first-level").not(this).removeClass("open");
     $(".account__first-level").not(this).next().slideUp(300);
     $(this).toggleClass("open");
+    $(this).next().slideToggle(300);
+  });
+
+  $(".checkout__coupons-questionbox").on('click', function () {
+    $(".checkout__coupons-questionbox").not(this).removeClass("active");
+    $(".checkout__coupons-questionbox").not(this).next().slideUp(300);
+    $(this).toggleClass("active");
     $(this).next().slideToggle(300);
   });
 
@@ -62,6 +69,10 @@ $(function () {
   $('.header__menu-btn').on('click', function () {
     $('.header__list, .header__menu-btn').toggleClass('active');
     $('body').toggleClass('lock'); // ! No scroll
+  });
+
+  $('.checkout__checkbox-style').on('click', function () {
+    $('.checkout__delivery-box').toggleClass('active');
   });
 
 

@@ -147,6 +147,10 @@ textarea {
     width: 168px;
   }
 
+  &--checkout {
+    @extend %oswald-400;
+  }
+
   @media (max-width: 549px) {
     font-size: 12px;
   }

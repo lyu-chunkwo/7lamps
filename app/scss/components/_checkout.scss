@@ -1,0 +1,181 @@
+.checkout {
+  padding-bottom: 40px;
+
+  &__box {
+    width: 100%;
+  }
+
+  &__coupons {
+  }
+
+  &__coupons-questionbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(../images/svg-sprite/sprite.svg#list);
+    }
+
+    p {
+      margin-right: 10px;
+    }
+  }
+
+  &__coupons-question {
+    border: none;
+    background-color: transparent;
+    color: $accent;
+    cursor: pointer;
+  }
+
+  &__coupons-body {
+    margin-bottom: 25px;
+  }
+
+  &__coupons-form {
+    display: flex;
+    align-items: center;
+  }
+
+  &__coupons-input {
+    max-width: 400px;
+    width: 100%;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid $border;
+    border-radius: 3px;
+    color: $text;
+
+    &::placeholder {
+      opacity: 0.5;
+    }
+  }
+
+  &__input {
+  }
+
+  &__coupons-btn {
+    padding: 6px 15px;
+    border-radius: 3px;
+    border: 1px solid $accent;
+  }
+
+  &__details {
+  }
+
+  &__forms {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form {
+    max-width: 400px;
+  }
+
+  &__payment-form {
+    margin-right: 25px;
+  }
+
+  &__form-title {
+  }
+
+  &__label {
+    span {
+      color: $red;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    margin: 5px 0 15px;
+    border: 1px solid $border;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: $text;
+
+    &::placeholder {
+      opacity: 0.6;
+    }
+  }
+
+  &__textarea {
+    width: 100%;
+    margin-top: 5px;
+    border: 1px solid $border;
+    padding: 5px 10px;
+    resize: none;
+    min-height: 100px;
+    overflow-x: auto;
+    color: $text;
+
+    &::placeholder {
+      opacity: 0.6;
+    }
+  }
+
+  &__delivery-form {
+    overflow: hidden;
+  }
+
+  &__delivery-label {
+    position: relative;
+    padding-left: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 55;
+    background-color: #fff;
+  }
+
+  &__delivery-checkbox {
+    @extend %checkbox-hidden;
+
+    &:checked + .checkout__checkbox-style {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $accent;
+      }
+    }
+
+    &:checked .checkout__delivery-box {
+      transform: translateY(0%);
+    }
+  }
+
+  &__checkbox-style {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $accent;
+    margin-left: -30px;
+  }
+
+  &__delivery-box {
+    transform: translateY(-150%);
+    transition: transform 0.8s ease 0s;
+    position: relative;
+    z-index: 0;
+
+    &.active {
+      transform: translateY(0%);
+    }
+  }
+}
