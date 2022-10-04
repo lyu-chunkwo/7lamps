@@ -1,0 +1,156 @@
+.popup-link {
+  max-width: 150px;
+  display: flex;
+  justify-content: center;
+  padding: 5px 20px;
+
+  &:first-child {
+    margin-right: 35px;
+  }
+
+  &__box {
+    display: flex;
+    margin-bottom: 35px;
+  }
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 55;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+
+    .popup__content {
+      opacity: 1;
+      transform: translate(0px, 0px) rotateX(0deg);
+    }
+  }
+
+  &__area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  &__body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 450px;
+    padding: 50px 20px 20px;
+    background-color: #fff;
+    position: relative;
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $text;
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__label {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: 1px solid $border;
+    border-radius: 3px;
+    height: 35px;
+    padding: 10px;
+  }
+
+  &__btn-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &--registration {
+      display: block;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__policy-link {
+    color: $accent;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__btn {
+    padding: 5px 20px;
+    margin-right: 15px;
+    border-radius: 3px;
+    border: 1px solid $accent;
+    font-weight: 400;
+  }
+
+  &__checkbox {
+    @extend %checkbox-hidden;
+
+    &:checked + .popup__check-style {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url(../images/svg-sprite/sprite.svg#check-small);
+      }
+    }
+  }
+
+  &__check-style {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: -25px;
+    background-color: $accent;
+  }
+
+  &__check-label {
+    padding-left: 25px;
+    position: relative;
+    top: 1px;
+  }
+
+  &__forgotepass {
+    display: block;
+  }
+}

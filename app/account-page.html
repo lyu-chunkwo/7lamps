@@ -15,7 +15,7 @@
 
   <header class="header">
     <div class="container">
-      <div class="header__nav">
+      <div class="header__nav" id="header">
   <div class="logo">
     <a class="logo__link" href="index.html">
       <img class="logo__img" src="images/header/logo.png" alt="Логотип">
@@ -67,6 +67,82 @@
     <section class="account">
       <div class="container">
         <h2 class="title title--page">Мой аккаунт</h2>
+
+        <div class="account__access">
+  <div class="popup-link__box">
+    <a class="popup-link link-button" href="#popup">Авторизация</a>
+    <a class="popup-link link-button" href="#popup-2">Регистрация</a>
+  </div>
+
+  <div class="popup" id="popup">
+    <a class="popup__area" href="#header"></a>
+    <div class="popup__body">
+      <div class="popup__content">
+        <a class="popup__close" href="#">
+          <svg class="popup__close-svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#close"></use>
+          </svg>
+        </a>
+
+        <form class="popup__form">
+          <label class="popup__label" for="popup-email">Имя пользователя или email <span>*</span></label>
+          <input class="popup__input" type="text" id="popup-email">
+
+          <label class="popup__label" for="popup-pass">Пароль <span>*</span></label>
+          <input class="popup__input" type="password" id="popup-pass">
+
+          <div class="popup__btn-box">
+            <button class="popup__btn link-button" type="submit">войти</button>
+            <div class="check__box">
+              <label class="popup__check-label" for="check">
+                <input class="popup__checkbox" type="checkbox" id="check">
+                <span class="popup__check-style"></span>
+                Запомнить меня
+              </label>
+            </div>
+          </div>
+
+          <a class="popup__forgotepass" href="#header">Забыли свой пароль?</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="popup-2">
+    <a class="popup__area" href="#header"></a>
+    <div class="popup__body">
+      <div class="popup__content">
+        <a class="popup__close" href="#">
+          <svg class="popup__close-svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#close"></use>
+          </svg>
+        </a>
+
+        <form class="popup__form">
+          <label class="popup__label" for="popup-name">Имя пользователя <span>*</span></label>
+          <input class="popup__input" type="text" id="popup-name">
+
+          <label class="popup__label" for="popup-email">Email <span>*</span></label>
+          <input class="popup__input" type="email" id="popup-email">
+
+          <label class="popup__label" for="popup-pass">Пароль <span>*</span></label>
+          <input class="popup__input" type="password" id="popup-pass">
+
+          <div class="popup__btn-box popup__btn-box--registration">
+            <p>
+              Ваши личные данные будут использованы для упрощения вашей работы с сайтом, управления доступом к вашей
+              учётной записи
+              и для других целей, описанных в нашей политике <a class="popup__policy-link"
+                href="#">конфиденциальности</a>.
+            </p>
+            <button class="popup__btn link-button" type="submit">регистрация</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
         <div class="account__wrapper page-wrap">
 
           <div class="account__box page-content__box">
