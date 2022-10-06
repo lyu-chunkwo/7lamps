@@ -8,7 +8,7 @@
 
   <div class="checkout__coupons-body">
     <form class="checkout__coupons-form">
-      <input class="checkout__coupons-input checkout__input" type="text" placeholder="Код купона">
+      <input class="checkout__coupons-input" type="text" placeholder="Код купона">
       <button class="checkout__coupons-btn link-button link-button--checkout" type="submit">применить купон</button>
     </form>
   </div>
@@ -16,7 +16,7 @@
 
 <div class="checkout__details">
   <div class="checkout__forms">
-    <form class="checkout__payment-form checkout__form">
+    <form class="checkout__details-form checkout__form">
       <h3 class="checkout__form-title">Детали оплаты</h3>
       <label class="checkout__label" for="name">Имя <span>*</span></label>
       <input class="checkout__input" type="text" id="name">
@@ -44,10 +44,6 @@
 
       <label class="checkout__label" for="index">Почтовый индекс <span>*</span></label>
       <input class="checkout__input" type="text" id="index">
-
-      <label class="checkout__label" for="message">Примечание к заказу</label>
-      <textarea class="checkout__textarea" id="message"
-        placeholder="Примечания к вашему заказу, например, особые пожелания отделу доставки"></textarea>
     </form>
 
     <form class="checkout__delivery-form checkout__form">
@@ -84,7 +80,314 @@
 
         <label class="checkout__label" for="index">Почтовый индекс <span>*</span></label>
         <input class="checkout__input" type="text" id="index">
+
       </div>
+      <label class="checkout__label" for="message">Примечание к заказу</label>
+      <textarea class="checkout__textarea" id="message"
+        placeholder="Примечания к вашему заказу, например, особые пожелания отделу доставки"></textarea>
     </form>
+  </div>
+</div>
+
+<div class="checkout__order">
+  <h2 class="checkout__order-title">Ваш заказ</h2>
+  <div class="checkout__order-table">
+    <ul class="checkout__order-list">
+      <li class="checkout__order-item checkout__order-fat">Товар</li>
+      <li class="checkout__order-item checkout__order-normal">PFL-SC SENSOR <span class="checkout__order-fat">×
+          83</span></li>
+      <li class="checkout__order-item checkout__order-normal">PBH-PC3-RSI Sensor <span class="checkout__order-fat">×
+          7</span></li>
+      <li class="checkout__order-item checkout__order-fat">Подытог</li>
+      <li class="checkout__order-item checkout__order-fat">Доставка</li>
+      <li class="checkout__order-item checkout__order-fat">Итого к оплате</li>
+    </ul>
+
+    <ul class="checkout__order-list">
+      <li class="checkout__order-item checkout__order-fat">Итого</li>
+      <li class="checkout__order-item checkout__order-normal">610,714.0 ₸</li>
+      <li class="checkout__order-item checkout__order-normal">24,920.0 ₸</li>
+      <li class="checkout__order-item checkout__order-fat">635,634.0 ₸</li>
+      <li class="checkout__order-item checkout__order-fat">Бесплатная доставка</li>
+      <li class="checkout__order-item checkout__order-fat">635,634.0 ₸</li>
+    </ul>
+  </div>
+</div>
+
+<div class="checkout__payment">
+  <form class="checkout__payment-form">
+    <label class="checkout__payment-label checkout__payment-label1">
+      <input class="checkout__payment-radio checkout__payment-radio1" type="radio" name="payment" checked value="bank">
+      <span class="checkout__payment-radiostyle"></span>
+      Прямой банковский перевод
+    </label>
+    <div class="checkout__payment-hiddentext checkout__payment-hiddentext1 active">
+      <span></span>
+      <p>Оплату нужно направлять напрямую на наш банковский счет:</p>
+      <p>р/с KZ188560000010077290 KZT</p>
+      <p>БИН 160140024110</p>
+      <p>БИК KCJBKZKX</p>
+      <p>АО «Банк ЦентрКредит» г. Семей</p>
+      <p>Используйте идентификатор заказа в качестве кода платежа.</p>
+      <p>Заказ будет отправлен сразу после поступления средств на наш счет.</p>
+    </div>
+
+    <label class="checkout__payment-label checkout__payment-label2">
+      <input class="checkout__payment-radio checkout__payment-radio2" type="radio" name="payment" value="self-delivery">
+      <span class="checkout__payment-radiostyle"></span>
+      Оплата наличными при самовывозе
+    </label>
+    <div class="checkout__payment-hiddentext checkout__payment-hiddentext2">
+      <span></span>
+      <p>
+        Оплата наличными осуществляется при самовывозе со склада в г. Семей, ВКО.
+      </p>
+    </div>
+
+    <label class="checkout__payment-label checkout__payment-label3">
+      <input class="checkout__payment-radio checkout__payment-radio3" type="radio" name="payment" value="delivery">
+      <span class="checkout__payment-radiostyle"></span>
+      Оплата наличными при доставке
+    </label>
+    <div class="checkout__payment-hiddentext checkout__payment-hiddentext3">
+      <span></span>
+      <p>
+        Оплата наличными при доставке осуществляется в Алматы, Астане, и во всех областных центрах РК.
+        А так-же в следующих районных центрах РК — Экибастуз, Жезказган, Степногорск, Темиртау, Рудный, Аягоз.
+      </p>
+    </div>
+  </form>
+
+  <div class="checkout__payment-text">
+    Ваши личные данные будут использоваться для обработки ваших заказов, и не будут опубликованы. Ознакомиться с
+    условиями
+    Вы можете на странице-<a class="checkout__payment-policy" href="policy-page.html" target="_blank">политика
+      конфиденциальности</a>
+  </div>
+
+  <div class="contract">
+    <h3 class="contract__title">публичная оферта</h3>
+    <div class="contract__descr">
+      <p>
+        Интернет-магазин «7lamps», расположенный на доменном имени www.7lamp.kz, именуемый в дальнейшем «Продавец»,
+        публикует
+        Публичную оферту о продаже Товара дистанционным способом.
+      </p>
+    </div>
+
+    <ol class="contract__list">
+      <li class="contract__item">
+        <h4 class="contract__item-title">определение терминов</h4>
+        <div class="contract__item-text">
+          <p>
+            1.1. Публичная оферта (далее – «Оферта») — публичное предложение Продавца, адресованное неопределенному
+            кругу лиц,
+            заключить с Продавцом договор купли-продажи товара дистанционным способом (далее — «Договор») на условиях,
+            содержащихся
+            в настоящей Оферте, включая все Приложения.
+          </p>
+          <p>
+            1.2. Заказ Товара на сайте Интернет-магазина – позиции, указанные Покупателем из ассортимента Товара,
+            предложенного к
+            продаже, при оформлении заявки на приобретение Товара на сайте Интернет-магазина или через Оператора.
+          </p>
+        </div>
+      </li>
+      <li class="contract__item">
+        <h4 class="contract__item-title">общие положения</h4>
+        <div class="contract__item-text">
+          <p>
+            2.1. Заказ Покупателем Товара, размещенного на сайте Интернет-магазина означает, что Покупатель согласен со
+            всеми
+            условиями настоящей Оферты.
+          </p>
+          <p>2.2. Администрация сайта Интернет-магазина имеет право вносить изменения в Оферту без уведомления
+            Покупателя.</p>
+          <p>2.3. Срок действия Оферты не ограничен, если иное не указано на сайте Интернет-магазина.</p>
+          <p>
+            2.4. Продавец предоставляет Покупателю полную и достоверную информацию о Товаре, включая информацию об
+            основных
+            потребительских свойствах Товара, месте изготовления, а также информацию о гарантийном сроке и сроке
+            годности Товара на
+            сайте Интернет магазина, в разделе название раздела.
+          </p>
+        </div>
+      </li>
+      <li class="contract__item">
+        <h4 class="contract__item-title">цена товара</h4>
+        <div class="contract__item-text">
+          <p>3.1. Цена на каждую позицию Товара указана на сайте Интернет-магазина.</p>
+          <p>3.2. Продавец имеет право в одностороннем порядке изменить цену на любую позицию Товара.</p>
+          <p>
+            3.3. В случае изменения цены на заказанный Товар Продавец обязуется в течение 2х дней проинформировать
+            Покупателя об
+            изменении цены Товара.
+          </p>
+          <p>
+            3.4. Покупатель вправе подтвердить либо аннулировать Заказ на приобретение Товара, если цена изменена
+            Продавцом после
+            оформления Заказа.
+          </p>
+          <p>3.5. Изменение Продавцом цены на оплаченный Покупателем Товар не допускается.</p>
+          <p>
+            3.6. Продавец указывает стоимость доставки Товара на сайте Интернет-магазина либо сообщает Покупателю при
+            оформлении
+            заказа Оператором.
+          </p>
+          <p>3.7. Обязательства Покупателя по оплате Товара считаются исполненными с момента поступления Продавцу
+            денежных средств.</p>
+          <p>
+            3.8. Расчеты между Продавцом и Покупателем за Товар производятся способами, указанными на сайте
+            Интернет-магазина в
+            разделе http://7lamp.kz/checkout/
+          </p>
+        </div>
+      </li>
+      <li class="contract__item">
+        <h4 class="contract__item-title">оформление заказа</h4>
+        <div class="contract__item-text">
+          <p>4.1. Заказ Товара осуществляется Покупателем сервис сайта Интернет-магазина http://7lamp.kz/checkout/.</p>
+          <p>4.2. При оформлении заказа на сайте Интернет-магазина Покупатель обязуется предоставить следующую
+            информацию:</p>
+          <p>4.2.1. фамилия, имя, Покупателя или указанного им лица (получателя);</p>
+          <p>4.2.2. адрес, по которому следует доставить Товар (если доставка до адреса Покупателя);</p>
+          <p>4.2.3. адрес электронной почты;</p>
+          <p>4.2.4. контактный телефон.</p>
+          <p>
+            4.3. Наименование, количество, ассортимент, артикул, цена выбранного Покупателем Товара указываются в
+            корзине Покупателя
+            на сайте Интернет-магазина.
+          </p>
+          <p>
+            4.4. Если Продавцу необходима дополнительная информация, он вправе запросить ее у Покупателя. В случае не
+            предоставления
+            необходимой информации Покупателем, Продавец не несет ответственности за выбранный Покупателем Товар.
+          </p>
+          <p>
+            4.5. При оформлении Заказа через Оператора (п. 4.1. настоящей Оферты) Покупатель обязуется предоставить
+            информацию,
+            указанную в п. 4.2. настоящей Оферты.
+          </p>
+          <p>
+            4.6. Принятие Покупателем условий настоящей Оферты осуществляется посредством внесения Покупателем
+            соответствующих
+            данных в регистрационную форму на сайте Интернет-магазина. После оформления Заказа через Оператора данные о
+            Покупателе
+            регистрируются в базе данных Продавца. Утвердив Заказ выбранного Товара, Покупатель предоставляет Оператору
+            необходимую
+            информацию в соответствии с порядком, указанном в п. 4.2. настоящей Оферты.
+          </p>
+          <p>
+            4.7. Продавец не несет ответственности за содержание и достоверность информации, предоставленной Покупателем
+            при
+            оформлении Заказа.
+          </p>
+          <p>4.8. Покупатель несет ответственность за достоверность предоставленной информации при оформлении Заказа.
+          </p>
+          <p>
+            4.9. Договор купли-продажи дистанционным способом между Продавцом и Покупателем считается заключенным с
+            момента выдачи
+            Продавцом Покупателю кассового или товарного чека либо иного документа, подтверждающего оплату товара.
+          </p>
+        </div>
+      </li>
+      <li class="contract__item">
+        <h4 class="contract__item-title">доставка и передача товара покупателю</h4>
+        <div class="contract__item-text">
+          <p>5.1. Продавец оказывает Покупателю услуги по доставке Товара одним из способов, указанных на сайте
+            Интернет-магазина.</p>
+          <p>
+            5.2. Если Договор купли-продажи товара дистанционным способом (далее – Договор) заключен с условием о
+            доставке Товара
+            Покупателю, Продавец обязан в установленный Договором срок доставить Товар в место, указанное Покупателем, а
+            если место
+            доставки Товара Покупателем не указано, то по месту его жительства или регистрации.
+          </p>
+          <p>5.3. Место доставки Товара Покупатель указывает при оформлении Заказа на приобретение Товара.</p>
+          <p>5.4. Срок доставки Товара Покупателю состоит из срока обработки заказа и срока доставки.</p>
+          <p>
+            5.5. Доставленный Товар передается Покупателю, а при отсутствии Покупателя — любому лицу, предъявившему
+            квитанцию или
+            иной документ, подтверждающий заключение Договора или оформление доставки Товара.
+          </p>
+          <p>
+            5.6. В момент передачи Товара в обязательном порядке в письменной форме Покупателю сообщаются сведения,
+            предусмотренные
+            в Приложении № номер к Договору.
+          </p>
+          <p>
+            5.7. Информация о Товаре доводится до сведения Покупателя в технической документации, прилагаемой к Товару,
+            на
+            этикетках, путем нанесения маркировки или иным способом, принятым для отдельных видов товаров.
+          </p>
+          <p>
+            5.8. Сведения об обязательном подтверждении соответствия Товара представляются в порядке и способами,
+            которые
+            установлены законодательством РК о техническом регулировании, и включают в себя сведения о номере документа,
+            подтверждающего такое соответствие, о сроке его действия и об организации, его выдавшей.
+          </p>
+        </div>
+      </li>
+      <li class="contract__item">
+        <h4 class="contract__item-title">реквизиты продавца</h4>
+        <div class="contract__item-text">
+          <ul class="contract__details-list">
+            <li class="contract__details-item contract__details-item--fat">
+              Продавец:
+            </li>
+            <li class="contract__details-item">
+              Название организации, ИП:
+            </li>
+            <li class="contract__details-item">
+              Телефон:
+            </li>
+            <li class="contract__details-item">
+              Адрес:
+            </li>
+            <li class="contract__details-item">
+              Юридический адрес:
+            </li>
+            <li class="contract__details-item">
+              Банковские реквизиты:
+            </li>
+            <li class="contract__details-item contract__details-item--fat">
+              К/с:
+            </li>
+            <li class="contract__details-item contract__details-item--fat">
+              Бик:
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+
+    <div class="contract__footer">
+      <p>
+        Внимательно ознакомьтесь с текстом публичной оферты, и если Вы не согласны с каким-либо пунктом оферты, Вы
+        вправе
+        отказаться от покупки Товаров, предоставляемых Продавцом, и не совершать действий, указанный в п. 2.1. настоящей
+        Оферты.
+      </p>
+      <p>
+        Согласен с договором
+      </p>
+    </div>
+  </div>
+
+  <form class="checkout__payment-form checkout__payment-form--checkbox">
+    <label class="checkout__payment-label checkout__payment-label--bottom">
+      <input class="checkout__payment-checkbox" type="checkbox"
+        onchange="document.getElementById('submit').disabled = !this.checked;">
+      <span class="checkout__payment-checkboxstyle"></span>
+      Я прочитал(а) и соглашаюсь с правилами сайта
+      <span class="checkout__payment-asterics">*</span>
+    </label>
+    <a class="checkout__payment-checkboxlink" target="_blank">
+      правила и условия
+    </a>
+  </form>
+
+  <div class="checkout__btn-box">
+    <button class="checkout__form-btn link-button" id="submit" type="submit" disabled>подтвердить заказ</button>
   </div>
 </div>

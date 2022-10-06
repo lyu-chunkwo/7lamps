@@ -153,5 +153,7 @@
 
   &__forgotepass {
     display: block;
+    color: $text;
+    text-decoration: underline;
   }
 }

@@ -5,9 +5,6 @@
     width: 100%;
   }
 
-  &__coupons {
-  }
-
   &__coupons-questionbox {
     display: flex;
     align-items: center;
@@ -61,9 +58,6 @@
     }
   }
 
-  &__input {
-  }
-
   &__coupons-btn {
     padding: 6px 15px;
     border-radius: 3px;
@@ -71,6 +65,7 @@
   }
 
   &__details {
+    margin-bottom: 20px;
   }
 
   &__forms {
@@ -80,13 +75,15 @@
 
   &__form {
     max-width: 400px;
+    width: 100%;
   }
 
-  &__payment-form {
+  &__details-form {
     margin-right: 25px;
   }
 
   &__form-title {
+    margin-bottom: 15px;
   }
 
   &__label {
@@ -112,6 +109,7 @@
     width: 100%;
     margin-top: 5px;
     border: 1px solid $border;
+    border-radius: 3px;
     padding: 5px 10px;
     resize: none;
     min-height: 100px;
@@ -123,10 +121,6 @@
     }
   }
 
-  &__delivery-form {
-    overflow: hidden;
-  }
-
   &__delivery-label {
     position: relative;
     padding-left: 30px;
@@ -134,29 +128,29 @@
     font-size: 18px;
     display: flex;
     align-items: center;
+    max-width: 400px;
     width: 100%;
     z-index: 55;
     background-color: #fff;
+    margin-bottom: 16px;
   }
 
   &__delivery-checkbox {
     @extend %checkbox-hidden;
 
-    &:checked + .checkout__checkbox-style {
-      &::before {
-        content: "";
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: $accent;
+    &:checked {
+      & + .checkout__checkbox-style {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: $accent;
+        }
       }
-    }
-
-    &:checked .checkout__delivery-box {
-      transform: translateY(0%);
     }
   }
 
@@ -166,16 +160,199 @@
     height: 20px;
     border: 2px solid $accent;
     margin-left: -30px;
+    cursor: pointer;
   }
 
-  &__delivery-box {
-    transform: translateY(-150%);
-    transition: transform 0.8s ease 0s;
+  &__order {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  &__order-title {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
+  &__order-table {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $border-light;
+    border-radius: 3px;
+  }
+
+  &__order-list {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  &__order-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid $border-light;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__order-fat {
+    font-weight: 700;
+  }
+
+  &__payment {
+    background-color: #f1f1f1;
+    padding: 20px 15px;
+    border-radius: 3px;
+  }
+
+  &__payment-label {
+    display: block;
+    margin-bottom: 20px;
+    padding-left: 35px;
+
+    &--bottom {
+      margin-right: 5px;
+      display: block;
+    }
+  }
+
+  &__payment-radio {
+    @extend %radio-hidden;
+
+    &:checked {
+      & + .checkout__payment-radiostyle {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: $accent;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  &__payment-radiostyle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $accent;
+    border-radius: 50%;
+    margin-left: -30px;
+  }
+
+  &__payment-hiddentext {
+    padding: 15px;
+    border-radius: 3px;
+    background-color: rgb(219, 219, 219);
+    margin-bottom: 20px;
     position: relative;
-    z-index: 0;
+    display: none;
 
     &.active {
-      transform: translateY(0%);
+      display: block;
+    }
+
+    span {
+      width: 0;
+      height: 0;
+      border-top: 20px solid rgb(219, 219, 219);
+      border-left: 20px solid transparent;
+      position: absolute;
+      transform: rotate(-45deg);
+      top: -8px;
+      left: 38px;
+    }
+  }
+
+  &__payment-text {
+    margin-bottom: 25px;
+  }
+
+  &__payment-form {
+    &--checkbox {
+      display: flex;
+    }
+  }
+
+  &__payment-policy,
+  &__payment-checkboxlink {
+    color: $accent;
+    text-decoration: underline;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__payment-checkboxlink {
+    cursor: pointer;
+  }
+
+  &__payment-checkbox {
+    @extend %checkbox-hidden;
+
+    &:checked {
+      & + .checkout__payment-checkboxstyle {
+        &::before {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: $accent;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+
+  &__payment-checkboxstyle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $accent;
+    margin-left: -30px;
+  }
+
+  &__payment-asterics {
+    color: $red;
+  }
+
+  &__btn-box {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__form-btn {
+    padding: 5px 15px;
+    background-color: transparent;
+    cursor: not-allowed;
+    border: 2px solid rgba($accent, 0.3);
+    color: rgba($accent, 0.3);
+
+    &:hover {
+      border: 2px solid rgba($accent, 0.3);
+      color: rgba($accent, 0.3);
+      background-color: transparent;
+    }
+
+    &.active {
+      border: 2px solid $accent;
+      color: #fff;
+      background-color: $accent;
+      cursor: pointer;
+
+      &:hover {
+        border-color: $accent;
+        background-color: transparent;
+        color: $accent;
+      }
     }
   }
 }
