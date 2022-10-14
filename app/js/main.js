@@ -128,4 +128,10 @@ $(function () {
   });
 
 
+
+  $('input, select').styler();
+
+  let inputValue = $('.cart__table-item--price').data('price');
+  console.log(inputValue);
+
 });

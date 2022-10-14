@@ -71,15 +71,27 @@
   &__forms {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1156px) {
+      display: block;
+    }
   }
 
   &__form {
     max-width: 400px;
     width: 100%;
+
+    @media (max-width: 1156px) {
+      max-width: 100%;
+    }
   }
 
   &__details-form {
     margin-right: 25px;
+
+    @media (max-width: 1156px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__form-title {
@@ -176,6 +188,7 @@
   &__order-table {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid $border-light;
     border-radius: 3px;
   }
@@ -191,6 +204,10 @@
 
     &:last-child {
       border: none;
+    }
+
+    @media (max-width: 399px) {
+      font-size: 12px;
     }
   }
 
@@ -210,8 +227,12 @@
     padding-left: 35px;
 
     &--bottom {
-      margin-right: 5px;
+      margin-right: 10px;
       display: block;
+
+      @media (max-width: 563px) {
+        margin-bottom: 5px;
+      }
     }
   }
 
@@ -275,6 +296,14 @@
   &__payment-form {
     &--checkbox {
       display: flex;
+
+      @media (max-width: 563px) {
+        display: block;
+      }
+
+      @media (max-width: 434px) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -290,6 +319,13 @@
 
   &__payment-checkboxlink {
     cursor: pointer;
+    font-size: 16px;
+
+    @media (max-width: 563px) {
+      margin-bottom: 20px;
+      display: block;
+      text-align: right;
+    }
   }
 
   &__payment-checkbox {
@@ -317,6 +353,7 @@
     height: 20px;
     border: 2px solid $accent;
     margin-left: -30px;
+    cursor: pointer;
   }
 
   &__payment-asterics {

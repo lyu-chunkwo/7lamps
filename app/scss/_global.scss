@@ -165,6 +165,12 @@ textarea {
   max-width: 750px;
   margin-right: 40px;
 
+  &--mobile {
+    @media (max-width: 920px) {
+      margin-right: 0;
+    }
+  }
+
   @media (max-width: 920px) {
     max-width: 100%;
     margin-bottom: 30px;

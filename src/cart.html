@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.png" type="image/x-icon" />
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-  <title>7lamps | Page</title>
+  <title>7lamps | Корзина</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -20,12 +20,171 @@
   </header>
 
   <main class="main main--page">
-    <section class="contacts">
+    <section class="cart">
       <div class="container">
-        <h2 class="title title--page">Контакты</h2>
-        <div class="contacts__wrapper page-wrap">
-          <div class="contacts__box page-content__box">
+        <h2 class="title title--page">Корзина</h2>
+        <div class="cart__wrapper page-wrap">
+          <div class="cart__box page-content__box page-content__box--mobile">
+            <div class="cart__discount-descr">
+              <p>
+                Скидки по купонам доступны только для зарегистрированных пользователей. Подробнее о скидках смотрите на
+                странице <a class="cart__discount-link" href="account-page.html">Мой аккаунт</a>
+              </p>
+            </div>
 
+            <div class="cart__table-box">
+              <ul class="cart__table-items">
+                <li class="cart__table-titleitem">
+                  <ul class="cart__table-titlebox">
+                    <li class="cart__table-title">Товар</li>
+                    <li class="cart__table-title">Цена</li>
+                    <li class="cart__table-title">Количество</li>
+                    <li class="cart__table-title">Итого</li>
+                  </ul>
+                </li>
+
+                <li class="cart__table-boxitem">
+                  <ul class="cart__table-contentbox">
+                    <li class="cart__table-item cart__table-item--product">
+                      <a class="cart__table-link" href="#">PFL-SC SENSOR</a>
+                    </li>
+                    <li class="cart__table-item cart__table-item--price" data-price="7000">7,358.0 ₸</li>
+                    <li class="cart__table-item cart__table-item--amount">
+                      <form class="cart__table-form">
+                        <input class="cart__table-number" min="1" max="9999" type="number" value="1" readonly>
+                      </form>
+                    </li>
+                    <li class="cart__table-item cart__table-item--total">7,358.0 ₸</li>
+                  </ul>
+                  <button class="cart__item-remove">
+                    <svg class="cart__remove-svg" width="20px" height="20px">
+                      <use xlink:href="images/svg-sprite/sprite.svg#remove"></use>
+                    </svg>
+                    <span class="cart__tooltiptext">Удалить из корзины</span>
+                  </button>
+                  <a class="cart__img-link" href="#">
+                    <img class="cart__img" src="images/products/pfl-sc_sensor_30w.png" alt="pfl-sc_sensor_30w">
+                  </a>
+                </li>
+
+                <li class="cart__table-boxitem">
+                  <ul class="cart__table-contentbox">
+                    <li class="cart__table-item cart__table-item--product">
+                      <a class="cart__table-link" href="#">PBH-PC3-RSI Sensor</a>
+                    </li>
+                    <li class="cart__table-item cart__table-item--price">3,560.0 ₸</li>
+                    <li class="cart__table-item cart__table-item--amount">
+                      <form class="cart__table-form">
+                        <input class="cart__table-number" min="1" max="9999" type="number" value="1" readonly>
+                      </form>
+                    </li>
+                    <li class="cart__table-item cart__table-item--total">3,560.0 ₸</li>
+                  </ul>
+                  <button class="cart__item-remove">
+                    <svg class="cart__remove-svg" width="20px" height="20px">
+                      <use xlink:href="images/svg-sprite/sprite.svg#remove"></use>
+                    </svg>
+                    <span class="cart__tooltiptext">Удалить из корзины</span>
+                  </button>
+                  <a class="cart__img-link" href="#">
+                    <img class="cart__img" src="images/products/pbh-pc3-rsi_sensor_sign.png"
+                      alt="pbh-pc3-rsi_sensor_sign">
+                  </a>
+                </li>
+              </ul>
+
+              <div class="cart__coupons-box">
+                <div class="cart__coupons-inputbox">
+                  <input class="cart__coupons-input" type="text" placeholder="Код купона">
+                  <button class="cart__coupons-btn link-button" type="submit">применить купон</button>
+                </div>
+                <div class="cart__update">
+                  <button class="cart__update-btn link-button" type="submit">обновить корзину</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart__tablebox-mobile">
+              <ul class="cart__mobile-items">
+                <li class="cart__mobile-item">
+                  <button class="cart__item-remove cart__item-remove--mobile">
+                    <svg class="cart__remove-svg" width="20px" height="20px">
+                      <use xlink:href="images/svg-sprite/sprite.svg#remove"></use>
+                    </svg>
+                    <span class="cart__tooltiptext cart__tooltiptext--mobile">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--product">
+                  <div class="cart__table-title">Товар:</div>
+                  <a class="cart__table-link" href="#">PBH-PC3-RSI Sensor</a>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--price">
+                  <div class="cart__table-title">Цена:</div>
+                  <div class="cart__table-item cart__table-item--price">7,358.0 ₸</div>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--amount">
+                  <div class="cart__table-title">Количество</div>
+                  <form class="cart__table-form cart__table-form--mobile">
+                    <input class="cart__table-number" min="1" max="9999" type="number" value="1" readonly>
+                  </form>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--total">
+                  <div class="cart__table-title">Итого</div>
+                  <div class="cart__table-item cart__table-item--total">7,358.0 ₸</div>
+                </li>
+              </ul>
+
+              <ul class="cart__mobile-items">
+                <li class="cart__mobile-item cart__mobile-item--remove">
+                  <button class="cart__item-remove cart__item-remove--mobile">
+                    <svg class="cart__remove-svg" width="20px" height="20px">
+                      <use xlink:href="images/svg-sprite/sprite.svg#remove"></use>
+                    </svg>
+                    <span class="cart__tooltiptext cart__tooltiptext--mobile">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--product">
+                  <div class="cart__table-title">Товар:</div>
+                  <a class="cart__table-link" href="#">PBH-PC3-RSI Sensor</a>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--price">
+                  <div class="cart__table-title">Цена:</div>
+                  <div class="cart__table-item cart__table-item--price">3,560.0 ₸</div>
+                </li>
+                <li class="cart__mobile-item">
+                  <div class="cart__table-title">Количество</div>
+                  <form class="cart__table-form cart__table-form--mobile">
+                    <input class="cart__table-number" min="1" max="9999" type="number" value="1" readonly>
+                  </form>
+                </li>
+                <li class="cart__mobile-item">
+                  <div class="cart__table-title">Итого</div>
+                  <div class="cart__table-item cart__table-item--total">3,560.0 ₸</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="cart__orderamount">
+              <h2 class="cart__orderamount-title">Сумма заказов</h2>
+
+              <ul class="cart__orderamount-box">
+                <li class="cart__orderamount-item">
+                  <div class="cart__item-title">Подытог</div>
+                  <div class="cart__item-value">10,918.0 ₸</div>
+                </li>
+                <li class="cart__orderamount-item">
+                  <div class="cart__item-title">Доставка</div>
+                  <div class="cart__item-value">Бесплатная доставка по адресу: Абая 45 кв87, Семей,
+                    Казахстан.</div>
+                </li>
+                <li class="cart__orderamount-item">
+                  <div class="cart__item-title">Итого</div>
+                  <div class="cart__item-value">10,918.0 ₸</div>
+                </li>
+              </ul>
+
+              <button class="cart__orderamount-btn link-button">оформить заказ</button>
+            </div>
           </div>
 
           @include('partials/aside.html')
