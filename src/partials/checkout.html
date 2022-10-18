@@ -48,7 +48,7 @@
 
     <form class="checkout__delivery-form checkout__form">
       <label class="checkout__delivery-label">
-        <input class="checkout__delivery-checkbox" type="checkbox">
+        <input class="checkout__delivery-checkbox" id="check" type="checkbox">
         <span class="checkout__checkbox-style"></span>
         Доставка по другому адресу?
       </label>
@@ -94,10 +94,10 @@
   <div class="checkout__order-table">
     <ul class="checkout__order-list">
       <li class="checkout__order-item checkout__order-fat">Товар</li>
-      <li class="checkout__order-item checkout__order-normal">PFL-SC SENSOR <span class="checkout__order-fat">×
-          83</span></li>
-      <li class="checkout__order-item checkout__order-normal">PBH-PC3-RSI Sensor <span class="checkout__order-fat">×
-          7</span></li>
+      <li class="checkout__order-item checkout__order-normal">PFL-SC SENSOR <span class="checkout__order-fat">×1</span>
+      </li>
+      <li class="checkout__order-item checkout__order-normal">PBH-PC3-RSI Sensor <span
+          class="checkout__order-fat">×1</span></li>
       <li class="checkout__order-item checkout__order-fat">Подытог</li>
       <li class="checkout__order-item checkout__order-fat">Доставка</li>
       <li class="checkout__order-item checkout__order-fat">Итого к оплате</li>
@@ -105,11 +105,11 @@
 
     <ul class="checkout__order-list">
       <li class="checkout__order-item checkout__order-fat">Итого</li>
-      <li class="checkout__order-item checkout__order-normal">610,714.0 ₸</li>
-      <li class="checkout__order-item checkout__order-normal">24,920.0 ₸</li>
-      <li class="checkout__order-item checkout__order-fat">635,634.0 ₸</li>
+      <li class="checkout__order-item checkout__order-normal">7,358.0 ₸</li>
+      <li class="checkout__order-item checkout__order-normal">3,560.0 ₸</li>
+      <li class="checkout__order-item checkout__order-fat">10,918.0 ₸</li>
       <li class="checkout__order-item checkout__order-fat">Бесплатная доставка</li>
-      <li class="checkout__order-item checkout__order-fat">635,634.0 ₸</li>
+      <li class="checkout__order-item checkout__order-fat">10,918.0 ₸</li>
     </ul>
   </div>
 </div>
@@ -117,8 +117,9 @@
 <div class="checkout__payment">
   <form class="checkout__payment-form">
     <label class="checkout__payment-label checkout__payment-label1">
-      <input class="checkout__payment-radio checkout__payment-radio1" type="radio" name="payment" checked value="bank">
-      <span class="checkout__payment-radiostyle"></span>
+      <input class="checkout__payment-radio checkout__payment-radio1 checked" id="radio-payment" type="radio"
+        name="payment" checked value="bank">
+      <span class="checkout__payment-radiostyle radio-active"></span>
       Прямой банковский перевод
     </label>
     <div class="checkout__payment-hiddentext checkout__payment-hiddentext1 active">
@@ -133,8 +134,9 @@
     </div>
 
     <label class="checkout__payment-label checkout__payment-label2">
-      <input class="checkout__payment-radio checkout__payment-radio2" type="radio" name="payment" value="self-delivery">
-      <span class="checkout__payment-radiostyle"></span>
+      <input class="checkout__payment-radio checkout__payment-radio2" id="radio-payment2" type="radio" name="payment"
+        value="self-delivery">
+      <span class="checkout__payment-radiostyle2"></span>
       Оплата наличными при самовывозе
     </label>
     <div class="checkout__payment-hiddentext checkout__payment-hiddentext2">
@@ -145,8 +147,9 @@
     </div>
 
     <label class="checkout__payment-label checkout__payment-label3">
-      <input class="checkout__payment-radio checkout__payment-radio3" type="radio" name="payment" value="delivery">
-      <span class="checkout__payment-radiostyle"></span>
+      <input class="checkout__payment-radio checkout__payment-radio3" id="radio-payment3" type="radio" name="payment"
+        value="delivery">
+      <span class="checkout__payment-radiostyle3"></span>
       Оплата наличными при доставке
     </label>
     <div class="checkout__payment-hiddentext checkout__payment-hiddentext3">
@@ -376,7 +379,7 @@
 
   <form class="checkout__payment-form checkout__payment-form--checkbox">
     <label class="checkout__payment-label checkout__payment-label--bottom">
-      <input class="checkout__payment-checkbox" type="checkbox"
+      <input class="checkout__payment-checkbox" id="check-terms" type="checkbox"
         onchange="document.getElementById('submit').disabled = !this.checked;">
       <span class="checkout__payment-checkboxstyle"></span>
       Я прочитал(а) и соглашаюсь с правилами сайта

@@ -171,6 +171,11 @@ textarea {
     }
   }
 
+  &--shop {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
   @media (max-width: 920px) {
     max-width: 100%;
     margin-bottom: 30px;
@@ -185,4 +190,119 @@ textarea {
   @media (max-width: 920px) {
     display: block;
   }
+}
+
+.jq-selectbox {
+  &:hover {
+    .jq-selectbox__trigger-arrow {
+      border-top: 5px solid $text;
+    }
+  }
+}
+
+.jq-selectbox__select-text {
+  color: $text;
+}
+
+.jq-selectbox__select {
+  border: 1px solid $border-light;
+  background: transparent;
+  font-family: "RobotoCondensed-Regular";
+  font-size: 16px;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-selectbox__trigger {
+  border-left: none;
+}
+
+.jq-selectbox__trigger-arrow {
+  border-top: 5px solid $text;
+}
+
+.jq-selectbox li {
+  font-family: "RobotoCondensed-Regular";
+  font-size: 16px;
+  color: $text;
+  transition: color 0.5s, background-color 0.5s;
+
+  &.selected {
+    background-color: $accent;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: $accent;
+    color: #fff;
+  }
+}
+
+.jq-number__field input {
+  padding: 0 9px;
+  text-align: center;
+}
+
+.jq-number__field {
+  width: 52px;
+  margin-left: 27px;
+  border-color: $border-light;
+}
+
+.jq-number__spin {
+  height: 26px;
+  background: transparent;
+  border-color: $border-light;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
+.jq-number__spin.minus {
+  left: 0;
+
+  &::after {
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.jq-number__spin.plus {
+  right: -66px;
+  &::after {
+    width: 10px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+  }
+}
+
+.jq-number__spin.minus,
+.jq-number__spin.plus {
+  &::after,
+  &::before {
+    background-color: $border;
+    border: none;
+  }
+}
+
+.similar-products__title {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
 }

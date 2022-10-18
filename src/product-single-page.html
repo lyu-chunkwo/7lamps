@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <title>7lamps | Страница продукта</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="scroll" id="up">
+
+  <header class="header">
+    <div class="container">
+      @include('partials/header.html')
+    </div>
+  </header>
+
+  <main class="main main--page">
+    <section class="product-single">
+      <div class="container">
+        <h2 class="title title--page">Продукт</h2>
+        <div class="product-single__wrapper page-wrap">
+          <div class="page-content__box">
+            @include('partials/product-single.html')
+          </div>
+
+          @include('partials/aside.html')
+
+        </div>
+      </div>
+    </section>
+
+    <section class="products-tile similar-products">
+      <div class="container">
+        @include('partials/similar-products.html')
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

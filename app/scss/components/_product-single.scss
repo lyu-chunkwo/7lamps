@@ -1,0 +1,264 @@
+.product-single {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    @media (max-width: 1156px) {
+      display: block;
+    }
+  }
+
+  .page-content__box {
+    @media (max-width: 920px) {
+      margin-right: 0;
+    }
+  }
+
+  &__sliders {
+    max-width: 300px;
+    margin-right: 50px;
+  }
+
+  &__item-sync {
+    width: 100px;
+    cursor: pointer;
+  }
+
+  &__img {
+    max-width: 300px;
+    max-height: 300px;
+
+    @media (max-width: 370px) {
+      max-width: 250px;
+    }
+  }
+
+  .slick-slide {
+    width: 120px;
+  }
+
+  &__img-sync {
+    width: 100px;
+    height: 100px;
+  }
+
+  &__content {
+    max-width: 400px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    color: $accent;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__select-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    span {
+      margin-right: 50px;
+    }
+  }
+
+  .jq-selectbox__select {
+    width: 120px;
+  }
+
+  &__quantity {
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+
+    .jq-number__field {
+      @media (max-width: 351px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .jq-number__spin.minus {
+      @media (max-width: 351px) {
+        top: 0;
+      }
+    }
+
+    @media (max-width: 351px) {
+      display: block;
+    }
+  }
+
+  &__table-number {
+    @media (max-width: 351px) {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__btn {
+    margin-left: 100px;
+    height: 28px;
+    font-size: 12px;
+    padding: 0 30px;
+    cursor: pointer;
+
+    @media (max-width: 351px) {
+      margin-left: 0;
+    }
+  }
+
+  &__article {
+    margin-bottom: 10px;
+
+    span {
+      &:last-child {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__category-link {
+    color: $accent;
+    text-decoration: underline;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__tabs {
+    margin-bottom: 40px;
+  }
+
+  &__tabs-btns {
+    display: flex;
+    border-bottom: 1px solid $accent;
+    padding-bottom: 17px;
+    margin-bottom: 20px;
+  }
+
+  &__tabs-btn {
+    padding: 20px 20px;
+    font-size: 18px;
+    color: $accent;
+
+    &.active {
+      background-color: $accent;
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__tabs-title {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  &__tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__name {
+    cursor: pointer;
+    max-width: 350px;
+    padding: 20px 20px 20px 0;
+    border-bottom: 1px solid $border-light;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 2px;
+      background-color: $text;
+      right: 0;
+      top: 50%;
+      transform: rotate(90deg);
+      transition: transform 0.5s, background-color 0.5s;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 2px;
+      background-color: $text;
+      right: 0;
+      top: 52%;
+      transform: translateY(-50%);
+      transition: background-color 0.5s;
+    }
+
+    &.open {
+      &::before {
+        transform: rotate(180deg);
+        background-color: $accent;
+      }
+
+      &::after {
+        background-color: $accent;
+      }
+    }
+
+    @media (max-width: 370px) {
+      font-size: 16px;
+
+      &::after,
+      &::before {
+        width: 14px;
+      }
+    }
+  }
+
+  &__accordion-list {
+    max-width: 350px;
+  }
+
+  &__accordion-item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-bottom: 1px solid $border-light;
+    text-transform: uppercase;
+    font-size: 14px;
+
+    @media (max-width: 370px) {
+      font-size: 12px;
+    }
+  }
+
+  &__details-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+}

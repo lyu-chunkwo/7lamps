@@ -118,12 +118,26 @@
     border-radius: 3px;
     border: 1px solid $accent;
     font-weight: 400;
+    cursor: pointer;
   }
 
   &__checkbox {
-    @extend %checkbox-hidden;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+  }
 
-    &:checked + .popup__check-style {
+  &__check-style {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-left: -25px;
+    background-color: $accent;
+    cursor: pointer;
+
+    &.popup-active {
       &::before {
         content: "";
         position: absolute;
@@ -135,14 +149,6 @@
         background-image: url(../images/svg-sprite/sprite.svg#check-small);
       }
     }
-  }
-
-  &__check-style {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    margin-left: -25px;
-    background-color: $accent;
   }
 
   &__check-label {
