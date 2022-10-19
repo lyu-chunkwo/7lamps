@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <title>7lamps | Аккаунт</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="scroll" id="up">
+
+  <header class="header">
+    <div class="container">
+      <div class="header__nav" id="header">
+  <div class="logo">
+    <a class="logo__link" href="index.html">
+      <img class="logo__img" src="images/header/logo.png" alt="Логотип">
+    </a>
+  </div>
+
+  <div class="header__box">
+    <button class="header__menu-btn" type="button">
+      <span></span>
+    </button>
+    <ul class="header__list">
+      <li class="header__item">
+        <a class="header__link" href="about-page.html">О нас</a>
+      </li>
+
+      <li class="header__item">
+        <a class="header__link" href="shop-page.html">магазин</a>
+      </li>
+
+      <li class="header__item">
+        <a class="header__link" href="contacts-page.html">контакты</a>
+      </li>
+
+      <li class="header__item">
+        <a class="header__link" href="account-page.html">мой аккаунт</a>
+      </li>
+
+      <li class="header__item">
+        <a class="header__link" href="checkout-page.html">оформление заказа</a>
+      </li>
+
+      <li class="header__cart">
+        <a class="header__cart-link" href="cart.html">
+          <svg class="header__cart-svg" width="20" height="18">
+            <use xlink:href="images/svg-sprite/sprite.svg#cart"></use>
+          </svg>
+          <span class="header__quantity-products">0</span>
+          <span class="header__products">товаров - </span>
+          <span class="header__sum">0.0 ₸</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+    </div>
+  </header>
+
+  <main class="main main--page">
+    <section class="account">
+      <div class="container">
+        <h2 class="title title--page">Мой аккаунт</h2>
+
+        <div class="account__access">
+  <div class="popup-link__box">
+    <a class="popup-link link-button" href="#popup">Авторизация</a>
+    <a class="popup-link link-button" href="#popup-2">Регистрация</a>
+  </div>
+
+  <div class="popup" id="popup">
+    <a class="popup__area" href="#header"></a>
+    <div class="popup__body">
+      <div class="popup__content">
+        <a class="popup__close" href="#">
+          <svg class="popup__close-svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#close"></use>
+          </svg>
+        </a>
+
+        <form class="popup__form">
+          <label class="popup__label" for="popup-email">Имя пользователя или email <span>*</span></label>
+          <input class="popup__input" type="text" id="popup-email">
+
+          <label class="popup__label" for="popup-pass">Пароль <span>*</span></label>
+          <input class="popup__input" type="password" id="popup-pass">
+
+          <div class="popup__btn-box">
+            <button class="popup__btn link-button" type="submit">войти</button>
+            <div class="check__box">
+              <label class="popup__check-label" for="check">
+                <input class="popup__checkbox" type="checkbox" id="check-popup">
+                <span class="popup__check-style"></span>
+                Запомнить меня
+              </label>
+            </div>
+          </div>
+
+          <a class="popup__forgotepass" href="#header">Забыли свой пароль?</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="popup" id="popup-2">
+    <a class="popup__area" href="#header"></a>
+    <div class="popup__body">
+      <div class="popup__content">
+        <a class="popup__close" href="#">
+          <svg class="popup__close-svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#close"></use>
+          </svg>
+        </a>
+
+        <form class="popup__form">
+          <label class="popup__label" for="popup-name">Имя пользователя <span>*</span></label>
+          <input class="popup__input" type="text" id="popup-name">
+
+          <label class="popup__label" for="popup-email">Email <span>*</span></label>
+          <input class="popup__input" type="email" id="popup-email">
+
+          <label class="popup__label" for="popup-pass">Пароль <span>*</span></label>
+          <input class="popup__input" type="password" id="popup-pass">
+
+          <div class="popup__btn-box popup__btn-box--registration">
+            <p>
+              Ваши личные данные будут использованы для упрощения вашей работы с сайтом, управления доступом к вашей
+              учётной записи
+              и для других целей, описанных в нашей политике <a class="popup__policy-link"
+                href="policy-page.html">конфиденциальности</a>.
+            </p>
+            <button class="popup__btn link-button" type="submit">регистрация</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div class="account__wrapper page-wrap">
+
+          <div class="account__box page-content__box">
+  <ul class="account__console-menu">
+    <li class="account__item account__first-level">
+      Меню
+    </li>
+    <li class="account__inner-level">
+      <ul>
+        <li class="account__item">
+          <a href="#tab-1" class="account__console-link active">Консоль</a>
+        </li>
+        <li class="account__item">
+          <a href="#tab-2" class="account__console-link">Заказы</a>
+        </li>
+        <li class="account__item">
+          <a href="#tab-3" class="account__console-link">Адреса</a>
+        </li>
+        <li class="account__item">
+          <a href="#tab-4" class="account__console-link">Детали учетной записи</a>
+        </li>
+        <li class="account__item">
+          <a href="#tab-5" class="account__console-link">Скидочные купоны</a>
+        </li>
+        <li class="account__item">
+          <a href="#" class="account__out">Выйти</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="account__content">
+    <div class="account__text active" id="tab-1">
+      <h3 class="account__content-title">
+        Добро пожаловать, Гость!
+      </h3>
+      <div class="account__console-text">
+        <p>
+          Из главной страницы аккаунта вы можете:
+        </p>
+      </div>
+      <ul class="account__console-list">
+        <li class="account__console-item">
+        </li>
+        <li class="account__console-item">
+          Посмотреть ваши недавние заказы
+        </li>
+        <li class="account__console-item">
+          Настроить платежный адрес и адрес доставки
+        </li>
+        <li class="account__console-item">
+          Изменить пароль и основную информацию
+        </li>
+        <li class="account__console-item">
+          А также другие действия
+        </li>
+      </ul>
+    </div>
+
+    <div class="account__text" id="tab-2">
+      <div class="account__content-box account__content-orderbox">
+        <div class="account__order-text">
+          <p>
+            На данный момент заказов нет!
+          </p>
+        </div>
+
+        <a class="link-button link-button--order" href="#">
+          перейти в магазин
+          <svg class="link-button__svg" width="13" height="13">
+            <use xlink:href="images/svg-sprite/sprite.svg#angles-right"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="account__text" id="tab-3">
+      <div class="account__content-box account__content-addressbox">
+        <div class="account__address-text">
+          <p>
+            Следующие адреса будут использованы при оформлении заказов по-умолчанию.
+          </p>
+        </div>
+
+        <div class="account__addresses">
+          <div class="account__addresses-box">
+            <h3 class="account__address-title">Платёжный адрес:</h3>
+            <ul class="account__address-list">
+              <li class="account__address-item">Пользователь</li>
+              <li class="account__address-item">Проспект Манаса 50 офис 35а</li>
+              <li class="account__address-item">Ленинский район</li>
+              <li class="account__address-item">г. Бишкек</li>
+              <li class="account__address-item">Кыргызстан</li>
+              <li class="account__address-item">720044</li>
+            </ul>
+            <a class="account__address-change" href="#">Изменить</a>
+          </div>
+
+          <div class="account__addresses-box">
+            <h3 class="account__address-title">Адрес доставки:</h3>
+            <ul class="account__address-list">
+              <li class="account__address-item">Пользователь</li>
+              <li class="account__address-item">Проспект Манаса 50 офис 35а</li>
+              <li class="account__address-item">Ленинский район</li>
+              <li class="account__address-item">г. Бишкек</li>
+              <li class="account__address-item">Кыргызстан</li>
+              <li class="account__address-item">720044</li>
+            </ul>
+            <a class="account__address-change" href="#">Изменить</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="account__text" id="tab-4">
+      <div class="account__content-box account__content-detailsbox">
+        <form class="account__form">
+          <div class="account__names-box">
+            <label class="account__name-label" for="name">
+              Имя <span>*</span>
+              <input class="account__input account__input--name" type="text" id="name">
+            </label>
+
+            <label class="account__name-label" for="surname">
+              Фамилия <span>*</span>
+              <input class="account__input" type="text" id="surname">
+            </label>
+          </div>
+
+          <label class="account__login-lable" for="login">Логин <span>*</span></label>
+          <input class="account__input" type="text" id="login">
+
+          <label class="account__email-label" for="email">E-mail <span>*</span></label>
+          <input class="account__input" type="email" id="email">
+
+          <h3 class="account__passchange-text">Смена пароля</h3>
+
+          <label class="account__passchange-label" for="current-password">
+            Действующий пароль (не заполняйте, чтобы оставить прежний)
+          </label>
+          <input class="account__input" type="password" id="current-password">
+
+          <label class="account__passchange-label" for="new-password">
+            Новый пароль (не заполняйте, чтобы оставить прежний)
+          </label>
+          <input class="account__input" type="password" id="new-password">
+
+          <label class="account__passchange-label" for="confirm-password">
+            Действующий пароль (не заполняйте, чтобы оставить прежний)
+          </label>
+          <input class="account__input" type="password" id="confirm-password">
+
+          <button class="account__button link-button" type="sumbit">сохранить изменения</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="account__text" id="tab-5">
+      <div class="account__content-box account__content-couponsbox">
+        <div class="account__coupons-text">
+          <p>
+            На данный момент купонов нет!
+          </p>
+        </div>
+
+        <a class="link-button link-button--coupons" href="#">
+          перейти в магазин
+          <svg class="link-button__svg" width="13" height="13">
+            <use xlink:href="images/svg-sprite/sprite.svg#angles-right"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+          <aside class="aside aside--page">
+  <div class="aside__search-box">
+    <h3 class="aside__title">Поиск по сайту</h3>
+
+    <form class="aside__form">
+      <input class="aside__input" type="text">
+      <button class="aside__search-btn" type="submit">Поиск</button>
+    </form>
+  </div>
+
+  <div class="aside__category">
+    <h3 class="aside__title">Категории</h3>
+
+
+    <div class="aside__accordion">
+      <div class="aside__accordion-wrapper">
+        <div class="aside__first-level aside__accordion-box">
+          <p>Внутреннее освещение</p>
+          <span>7</span>
+        </div>
+
+        <div class="aside__accordion-inner">
+          <a class="aside__accordion-all" href="interior-lighting-page.html">Смотреть все</a>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Универсальные светодиодные светильники</p>
+            <span>3</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Накладные светодиодные светильники</p>
+            <span>6</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Светодиодные пылевлагозащищённые светильники</p>
+            <span>5</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Специальное освещение</p>
+            <span>4</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Промышленное освещение</p>
+            <span>4</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Встраиваемые светодиодные светильники</p>
+            <span>4</span>
+          </div>
+
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside__accordion-wrapper">
+        <div class="aside__first-level aside__accordion-box">
+          <p>Наружное освещение</p>
+          <span>1</span>
+        </div>
+
+        <div class="aside__accordion-inner">
+          <a class="aside__accordion-all" href="outdoor-lighting-page.html">Смотреть все</a>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Прожекторы светодиодные</p>
+            <span>7</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">pfl-c</a>
+            <a class="aside__accordion-link" href="#">pfl-c sensor</a>
+            <a class="aside__accordion-link" href="#">pfl-rgb цветного сечения</a>
+            <a class="aside__accordion-link" href="#">pfl-sc sensor</a>
+            <a class="aside__accordion-link" href="#">pfl-sc</a>
+            <a class="aside__accordion-link" href="#">pfl-sc цветного свечения</a>
+            <a class="aside__accordion-link" href="#">pfl-s2</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside__accordion-wrapper">
+        <div class="aside__first-level aside__accordion-box">
+          <p>Источники света</p>
+          <span>1</span>
+        </div>
+
+        <div class="aside__accordion-inner">
+          <a class="aside__accordion-all" href="sources-light-page.html">Смотреть все</a>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Прожекторы светодиодные</p>
+            <span>7</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">pfl-c</a>
+            <a class="aside__accordion-link" href="#">pfl-c sensor</a>
+            <a class="aside__accordion-link" href="#">pfl-rgb цветного сечения</a>
+            <a class="aside__accordion-link" href="#">pfl-sc sensor</a>
+            <a class="aside__accordion-link" href="#">pfl-sc</a>
+            <a class="aside__accordion-link" href="#">pfl-sc цветного свечения</a>
+            <a class="aside__accordion-link" href="#">pfl-s2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="aside__socials">
+    <h3 class="aside__title">Наши профили в соцсетях</h3>
+
+    <ul class="socials-list">
+      <li class="socials-list__item">
+        <a href="#" class="socials-list__link">
+          <svg class="socials-list__svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#square-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials-list__item">
+        <a href="#" class="socials-list__link">
+          <svg class="socials-list__svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#square-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials-list__item">
+        <a href="#" class="socials-list__link">
+          <svg class="socials-list__svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#square-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials-list__item">
+        <a href="#" class="socials-list__link">
+          <svg class="socials-list__svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="footer__wrapper">
+    <div class="container">
+      <ul class="footer__items">
+        <li class="footer__item">
+          <h3 class="footer__title">Навигация по сайту</h3>
+          <nav class="footer__nav">
+            <ul class="footer__menu">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">О нас</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">магазин</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">контакты</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">мой аккаунт</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">оформление заказа</a>
+              </li>
+            </ul>
+
+            <div class="footer__cart">
+              <a class="footer__cart-link" href="#">
+                <svg class="footer__cart-svg" width="20" height="18">
+                  <use xlink:href="images/svg-sprite/sprite.svg#cart"></use>
+                </svg>
+                <span class="footer__quantity-products">0</span>
+                <span class="footer__products">товаров - </span>
+                <span class="footer__sum">0.0 ₸</span>
+              </a>
+            </div>
+          </nav>
+        </li>
+
+        <li class="footer__item">
+          <h3 class="footer__title">Контакты</h3>
+          <div class="footer__text">
+            <address class="footer__address">
+              Адрес: 071400, Республика Казахстан, ВКО, г. Семей, ул. Кабанбай батыра, 33
+            </address>
+            <div class="footer__contacts">
+              <a class="footer__phone" href="tel:7222525888">Тел: (7222) 525-888</a>
+              <a class="footer__email" href="mailto:info@7lamp.kz">E-mail: info@7lamp.kz</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="footer__item">
+          <h3 class="footer__title">Наши профили в соцсетях</h3>
+          <ul class="socials-list">
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#">
+                <svg class="socials-list__svg" width="30" height="30">
+                  <use xlink:href="images/svg-sprite/sprite.svg#square-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#">
+                <svg class="socials-list__svg" width="30" height="30">
+                  <use xlink:href="images/svg-sprite/sprite.svg#square-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#">
+                <svg class="socials-list__svg" width="30" height="30">
+                  <use xlink:href="images/svg-sprite/sprite.svg#square-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#">
+                <svg class="socials-list__svg" width="30" height="30">
+                  <use xlink:href="images/svg-sprite/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__copy">
+      <p>
+        7lamp.kz©2009-2022 Все права защищены.
+      </p>
+      <p>
+        Разработка сайта: Андрей Лю <a href="mailto:inbox@webex.go.kg">inbox@webex.go.kg</a>
+      </p>
+    </div>
+  </div>
+
+  <a class="go-up" href="#up">
+    <svg class="go-up__svg" width="35" height="35">
+      <use xlink:href="images/svg-sprite/sprite.svg#angle-up"></use>
+    </svg>
+  </a>
+</footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

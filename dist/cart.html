@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <title>7lamps | Корзина</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="scroll" id="up">
+
+  <header class="header">
+    <div class="container">
+      <div class="header__nav" id="header">
+  <div class="logo">
+    <a class="logo__link" href="index.html">
+      <img class="logo__img" src="images/header/logo.png" alt="Логотип">
+    </a>
+  </div>
+
+  <div class="header__box">
+    <button class="header__menu-btn" type="button">
+      <span></span>
+    </button>
+    <ul class="header__list">
+      <li class="header__item">
+        <a class="header__link" href="about-page.html">О нас</a>
+      </li>
+
+      <li class="header__item">
+        <a class="header__link" href="shop-page.html">магазин</a>
+      </li>
+
+      <li class="header__item">
+        <a class="header__link" href="contacts-page.html">контакты</a>
+      </li>
+
+      <li class="header__item">
+        <a class="header__link" href="account-page.html">мой аккаунт</a>
+      </li>
+
+      <li class="header__item">
+        <a class="header__link" href="checkout-page.html">оформление заказа</a>
+      </li>
+
+      <li class="header__cart">
+        <a class="header__cart-link" href="cart.html">
+          <svg class="header__cart-svg" width="20" height="18">
+            <use xlink:href="images/svg-sprite/sprite.svg#cart"></use>
+          </svg>
+          <span class="header__quantity-products">0</span>
+          <span class="header__products">товаров - </span>
+          <span class="header__sum">0.0 ₸</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+    </div>
+  </header>
+
+  <main class="main main--page">
+    <section class="cart">
+      <div class="container">
+        <h2 class="title title--page">Корзина</h2>
+        <div class="cart__wrapper page-wrap">
+          <div class="cart__box page-content__box page-content__box--mobile">
+            <div class="cart__discount-descr">
+              <p>
+                Скидки по купонам доступны только для зарегистрированных пользователей. Подробнее о скидках смотрите на
+                странице <a class="cart__discount-link" href="account-page.html">Мой аккаунт</a>
+              </p>
+            </div>
+
+            <div class="cart__table-box">
+              <ul class="cart__table-items">
+                <li class="cart__table-titleitem">
+                  <ul class="cart__table-titlebox">
+                    <li class="cart__table-title">Товар</li>
+                    <li class="cart__table-title">Цена</li>
+                    <li class="cart__table-title">Количество</li>
+                    <li class="cart__table-title">Итого</li>
+                  </ul>
+                </li>
+
+                <li class="cart__table-boxitem">
+                  <ul class="cart__table-contentbox">
+                    <li class="cart__table-item cart__table-item--product">
+                      <a class="cart__table-link" href="#">PFL-SC SENSOR</a>
+                    </li>
+                    <li class="cart__table-item cart__table-item--price" data-price="7000">7,358.0 ₸</li>
+                    <li class="cart__table-item cart__table-item--amount">
+                      <form class="cart__table-form quantity">
+                        <input class="cart__table-number" min="1" max="9999" type="number" value="1">
+                      </form>
+                    </li>
+                    <li class="cart__table-item cart__table-item--total">7,358.0 ₸</li>
+                  </ul>
+                  <button class="cart__item-remove">
+                    <svg class="cart__remove-svg" width="20px" height="20px">
+                      <use xlink:href="images/svg-sprite/sprite.svg#remove"></use>
+                    </svg>
+                    <span class="cart__tooltiptext">Удалить из корзины</span>
+                  </button>
+                  <a class="cart__img-link" href="#">
+                    <img class="cart__img" src="images/products/pfl-sc_sensor_30w.png" alt="pfl-sc_sensor_30w">
+                  </a>
+                </li>
+
+                <li class="cart__table-boxitem">
+                  <ul class="cart__table-contentbox">
+                    <li class="cart__table-item cart__table-item--product">
+                      <a class="cart__table-link" href="#">PBH-PC3-RSI Sensor</a>
+                    </li>
+                    <li class="cart__table-item cart__table-item--price">3,560.0 ₸</li>
+                    <li class="cart__table-item cart__table-item--amount">
+                      <form class="cart__table-form quantity">
+                        <input class="cart__table-number" min="1" max="9999" type="number" value="1" readonly>
+                      </form>
+                    </li>
+                    <li class="cart__table-item cart__table-item--total">3,560.0 ₸</li>
+                  </ul>
+                  <button class="cart__item-remove">
+                    <svg class="cart__remove-svg" width="20px" height="20px">
+                      <use xlink:href="images/svg-sprite/sprite.svg#remove"></use>
+                    </svg>
+                    <span class="cart__tooltiptext">Удалить из корзины</span>
+                  </button>
+                  <a class="cart__img-link" href="#">
+                    <img class="cart__img" src="images/products/pbh-pc3-rsi_sensor_sign.png"
+                      alt="pbh-pc3-rsi_sensor_sign">
+                  </a>
+                </li>
+              </ul>
+
+              <div class="cart__coupons-box">
+                <div class="cart__coupons-inputbox">
+                  <input class="cart__coupons-input" type="text" placeholder="Код купона">
+                  <button class="cart__coupons-btn link-button" type="submit">применить купон</button>
+                </div>
+                <div class="cart__update">
+                  <button class="cart__update-btn link-button" type="submit">обновить корзину</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart__tablebox-mobile">
+              <ul class="cart__mobile-items">
+                <li class="cart__mobile-item">
+                  <button class="cart__item-remove cart__item-remove--mobile">
+                    <svg class="cart__remove-svg" width="20px" height="20px">
+                      <use xlink:href="images/svg-sprite/sprite.svg#remove"></use>
+                    </svg>
+                    <span class="cart__tooltiptext cart__tooltiptext--mobile">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--product">
+                  <div class="cart__table-title">Товар:</div>
+                  <a class="cart__table-link" href="#">PBH-PC3-RSI Sensor</a>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--price">
+                  <div class="cart__table-title">Цена:</div>
+                  <div class="cart__table-item cart__table-item--price">7,358.0 ₸</div>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--amount">
+                  <div class="cart__table-title">Количество</div>
+                  <form class="cart__table-form cart__table-form--mobile quantity">
+                    <input class="cart__table-number cart__table-number--mobile" min="1" max="9999" type="number"
+                      value="1" readonly>
+                  </form>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--total">
+                  <div class="cart__table-title">Итого</div>
+                  <div class="cart__table-item cart__table-item--total">7,358.0 ₸</div>
+                </li>
+              </ul>
+
+              <ul class="cart__mobile-items">
+                <li class="cart__mobile-item cart__mobile-item--remove">
+                  <button class="cart__item-remove cart__item-remove--mobile">
+                    <svg class="cart__remove-svg" width="20px" height="20px">
+                      <use xlink:href="images/svg-sprite/sprite.svg#remove"></use>
+                    </svg>
+                    <span class="cart__tooltiptext cart__tooltiptext--mobile">Удалить из корзины</span>
+                  </button>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--product">
+                  <div class="cart__table-title">Товар:</div>
+                  <a class="cart__table-link" href="#">PBH-PC3-RSI Sensor</a>
+                </li>
+                <li class="cart__mobile-item cart__mobile-item--price">
+                  <div class="cart__table-title">Цена:</div>
+                  <div class="cart__table-item cart__table-item--price">3,560.0 ₸</div>
+                </li>
+                <li class="cart__mobile-item">
+                  <div class="cart__table-title">Количество</div>
+                  <form class="cart__table-form cart__table-form--mobile quantity">
+                    <input class="cart__table-number cart__table-number--mobile" min="1" max="9999" type="number"
+                      value="1" readonly>
+                  </form>
+                </li>
+                <li class="cart__mobile-item">
+                  <div class="cart__table-title">Итого</div>
+                  <div class="cart__table-item cart__table-item--total">3,560.0 ₸</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="cart__orderamount">
+              <h2 class="cart__orderamount-title">Сумма заказов</h2>
+
+              <ul class="cart__orderamount-box">
+                <li class="cart__orderamount-item">
+                  <div class="cart__item-title">Подытог</div>
+                  <div class="cart__item-value">10,918.0 ₸</div>
+                </li>
+                <li class="cart__orderamount-item">
+                  <div class="cart__item-title">Доставка</div>
+                  <div class="cart__item-value">Бесплатная доставка по адресу: Абая 45 кв87, Семей,
+                    Казахстан.</div>
+                </li>
+                <li class="cart__orderamount-item">
+                  <div class="cart__item-title">Итого</div>
+                  <div class="cart__item-value">10,918.0 ₸</div>
+                </li>
+              </ul>
+
+              <button class="cart__orderamount-btn link-button">оформить заказ</button>
+            </div>
+          </div>
+
+          <aside class="aside aside--page">
+  <div class="aside__search-box">
+    <h3 class="aside__title">Поиск по сайту</h3>
+
+    <form class="aside__form">
+      <input class="aside__input" type="text">
+      <button class="aside__search-btn" type="submit">Поиск</button>
+    </form>
+  </div>
+
+  <div class="aside__category">
+    <h3 class="aside__title">Категории</h3>
+
+
+    <div class="aside__accordion">
+      <div class="aside__accordion-wrapper">
+        <div class="aside__first-level aside__accordion-box">
+          <p>Внутреннее освещение</p>
+          <span>7</span>
+        </div>
+
+        <div class="aside__accordion-inner">
+          <a class="aside__accordion-all" href="interior-lighting-page.html">Смотреть все</a>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Универсальные светодиодные светильники</p>
+            <span>3</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Накладные светодиодные светильники</p>
+            <span>6</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Светодиодные пылевлагозащищённые светильники</p>
+            <span>5</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Специальное освещение</p>
+            <span>4</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Промышленное освещение</p>
+            <span>4</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Встраиваемые светодиодные светильники</p>
+            <span>4</span>
+          </div>
+
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+            <a class="aside__accordion-link" href="#">ppl-r</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside__accordion-wrapper">
+        <div class="aside__first-level aside__accordion-box">
+          <p>Наружное освещение</p>
+          <span>1</span>
+        </div>
+
+        <div class="aside__accordion-inner">
+          <a class="aside__accordion-all" href="outdoor-lighting-page.html">Смотреть все</a>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Прожекторы светодиодные</p>
+            <span>7</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">pfl-c</a>
+            <a class="aside__accordion-link" href="#">pfl-c sensor</a>
+            <a class="aside__accordion-link" href="#">pfl-rgb цветного сечения</a>
+            <a class="aside__accordion-link" href="#">pfl-sc sensor</a>
+            <a class="aside__accordion-link" href="#">pfl-sc</a>
+            <a class="aside__accordion-link" href="#">pfl-sc цветного свечения</a>
+            <a class="aside__accordion-link" href="#">pfl-s2</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside__accordion-wrapper">
+        <div class="aside__first-level aside__accordion-box">
+          <p>Источники света</p>
+          <span>1</span>
+        </div>
+
+        <div class="aside__accordion-inner">
+          <a class="aside__accordion-all" href="sources-light-page.html">Смотреть все</a>
+
+          <div class="aside__second-level aside__accordion-box">
+            <p>Прожекторы светодиодные</p>
+            <span>7</span>
+          </div>
+          <div class="aside__third-level aside__accordion-box">
+            <a class="aside__accordion-link" href="#">pfl-c</a>
+            <a class="aside__accordion-link" href="#">pfl-c sensor</a>
+            <a class="aside__accordion-link" href="#">pfl-rgb цветного сечения</a>
+            <a class="aside__accordion-link" href="#">pfl-sc sensor</a>
+            <a class="aside__accordion-link" href="#">pfl-sc</a>
+            <a class="aside__accordion-link" href="#">pfl-sc цветного свечения</a>
+            <a class="aside__accordion-link" href="#">pfl-s2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="aside__socials">
+    <h3 class="aside__title">Наши профили в соцсетях</h3>
+
+    <ul class="socials-list">
+      <li class="socials-list__item">
+        <a href="#" class="socials-list__link">
+          <svg class="socials-list__svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#square-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials-list__item">
+        <a href="#" class="socials-list__link">
+          <svg class="socials-list__svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#square-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials-list__item">
+        <a href="#" class="socials-list__link">
+          <svg class="socials-list__svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#square-twitter"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="socials-list__item">
+        <a href="#" class="socials-list__link">
+          <svg class="socials-list__svg" width="35" height="35">
+            <use xlink:href="images/svg-sprite/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="footer__wrapper">
+    <div class="container">
+      <ul class="footer__items">
+        <li class="footer__item">
+          <h3 class="footer__title">Навигация по сайту</h3>
+          <nav class="footer__nav">
+            <ul class="footer__menu">
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">О нас</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">магазин</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">контакты</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">мой аккаунт</a>
+              </li>
+              <li class="footer__menu-item">
+                <a class="footer__menu-link" href="#">оформление заказа</a>
+              </li>
+            </ul>
+
+            <div class="footer__cart">
+              <a class="footer__cart-link" href="#">
+                <svg class="footer__cart-svg" width="20" height="18">
+                  <use xlink:href="images/svg-sprite/sprite.svg#cart"></use>
+                </svg>
+                <span class="footer__quantity-products">0</span>
+                <span class="footer__products">товаров - </span>
+                <span class="footer__sum">0.0 ₸</span>
+              </a>
+            </div>
+          </nav>
+        </li>
+
+        <li class="footer__item">
+          <h3 class="footer__title">Контакты</h3>
+          <div class="footer__text">
+            <address class="footer__address">
+              Адрес: 071400, Республика Казахстан, ВКО, г. Семей, ул. Кабанбай батыра, 33
+            </address>
+            <div class="footer__contacts">
+              <a class="footer__phone" href="tel:7222525888">Тел: (7222) 525-888</a>
+              <a class="footer__email" href="mailto:info@7lamp.kz">E-mail: info@7lamp.kz</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="footer__item">
+          <h3 class="footer__title">Наши профили в соцсетях</h3>
+          <ul class="socials-list">
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#">
+                <svg class="socials-list__svg" width="30" height="30">
+                  <use xlink:href="images/svg-sprite/sprite.svg#square-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#">
+                <svg class="socials-list__svg" width="30" height="30">
+                  <use xlink:href="images/svg-sprite/sprite.svg#square-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#">
+                <svg class="socials-list__svg" width="30" height="30">
+                  <use xlink:href="images/svg-sprite/sprite.svg#square-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-list__item">
+              <a class="socials-list__link" href="#">
+                <svg class="socials-list__svg" width="30" height="30">
+                  <use xlink:href="images/svg-sprite/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="footer__copy">
+      <p>
+        7lamp.kz©2009-2022 Все права защищены.
+      </p>
+      <p>
+        Разработка сайта: Андрей Лю <a href="mailto:inbox@webex.go.kg">inbox@webex.go.kg</a>
+      </p>
+    </div>
+  </div>
+
+  <a class="go-up" href="#up">
+    <svg class="go-up__svg" width="35" height="35">
+      <use xlink:href="images/svg-sprite/sprite.svg#angle-up"></use>
+    </svg>
+  </a>
+</footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
