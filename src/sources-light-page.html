@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <title>7lamps | Page</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="scroll" id="up">
+
+  <header class="header">
+    <div class="container">
+      @include('partials/header.html')
+    </div>
+  </header>
+
+  <main class="main main--page">
+    <section class="sources-lighting">
+      <div class="container">
+        <h2 class="title title--page">Источники света</h2>
+        <div class="sources-lighting__wrapper page-wrap">
+          <div class="sources-lighting__box page-content__box">
+            <div class="category-link">
+              <ul class="category-link__items">
+                <li class="category-link__item">
+                  <a class="category-link__go" href="overhead-lamp-category-page.html">
+                    <img class="category-link__img" src="images/products/cources-lighting/pled-omni_a60.png"
+                      alt="pdl-r_25w">
+                    <div class="category-link__bottom">
+                      <div class="category-link__name">Лампы светодиодные</div>
+                      <div class="category-link__btn link-button">перейти</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          @include('partials/aside.html')
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  @include('partials/footer.html')
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

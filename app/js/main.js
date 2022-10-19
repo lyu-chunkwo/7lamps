@@ -1,6 +1,5 @@
 $(function () {
 
-
   $('.product-single__slider').slick({
     asNavFor: '.product-single__slider-sync',
     slidesToShow: 1,

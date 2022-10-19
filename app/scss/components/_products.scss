@@ -54,8 +54,8 @@
   }
 
   &__img {
-    width: 210px;
-    height: 210px;
+    width: 180px;
+    height: 180px;
     object-fit: cover;
     border-radius: 5px 5px 0 0;
   }
@@ -66,7 +66,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 245px;
+    min-height: 210px;
   }
 
   &__name {
@@ -88,7 +88,6 @@
 
   &__current-price {
     font-size: 18px;
-    color: $accent;
 
     &:empty {
       display: none;
@@ -106,15 +105,13 @@
     }
 
     &--discount {
-      text-decoration: underline;
-
       &:empty {
         display: none;
       }
     }
   }
 
-  &__discount {
+  &__discount-percent {
     font-style: italic;
     color: $red;
 

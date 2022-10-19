@@ -193,6 +193,16 @@
     font-size: 20px;
     text-transform: uppercase;
     position: relative;
+    transition: color 0.5s ease 0s;
+
+    &:hover {
+      color: $accent;
+
+      &::after,
+      &::before {
+        background-color: $accent;
+      }
+    }
 
     &::before {
       content: "";
@@ -219,6 +229,8 @@
     }
 
     &.open {
+      color: $accent;
+
       &::before {
         transform: rotate(180deg);
         background-color: $accent;
