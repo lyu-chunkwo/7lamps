@@ -1,4 +1,4 @@
-# [7Lamps](https://lyu-chunkwo.github.io/cinematica/dist/index.html) - Сайт магазина продающего светодиодные электро приборы.
+# [7Lamps](https://lyu-chunkwo.github.io/7lamps/dist/index.html) - Сайт магазина продающего светодиодные электро приборы.
 
 [<img src="https://lyu-chunkwo.github.io/cinematica/dist/images/foreadme/cinema.JPG" alt="img">](https://lyu-chunkwo.github.io/7lamps/dist/index.html)
 
